@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.PSEPage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+             Title="{Binding Title}"
+             BackgroundColor="White">
+
+    <ContentPage.BindingContext>
+        <ViewModels:PSEViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout  WidthRequest="400"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                Spacing="20">
+           
+            <Slider  x:Name="slider" Value="8" 
+                    Minimum="0" Maximum="10" BackgroundColor="White"/>
+            
+            <Label BindingContext="{x:Reference slider}" 
+                Text="{Binding Value}" 
+                  />
+
+            <Button Text="Add" Clicked="Add"/>
+            <Button Text="Deduct" Clicked="Deduct"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

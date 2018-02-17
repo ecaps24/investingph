@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.WatchListPage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+            xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"
+            xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             Title="{Binding Title}"
+             >
+
+    <ContentPage.BindingContext>
+        <ViewModels:WatchListViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TextToColorConverter x:Key="TextToColorConverter" />
+            <converters:ConnectionColorConverter x:Key="ConnectionColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <Grid>
+
+
+            <Label Text="Initializing..." 
+                    x:Name="lblStatus"
+                    TextColor="White" 
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    FontSize="14"
+                    BackgroundColor="#070707" Opacity="0.75"
+                      Grid.Column="0" Grid.Row="0"
+                  
+                   />
+
+            <StackLayout Orientation="Vertical"  
+                     BackgroundColor="Black" 
+                     Spacing="2" 
+                     Padding="2,2,2,0"
+                      Grid.Column="0" Grid.Row="0"
+                         >
+
+
+
+                <ListView ItemsSource="{Binding StockList}"
+                      HasUnevenRows="True"
+                      
+                      x:Name="lstView"
+                      BackgroundColor="#1E252B"
+                      
+                      IsPullToRefreshEnabled="True"
+                      SeparatorColor="Black"     
+                      SeparatorVisibility="Default"                  
+                      RefreshCommand="{Binding RefreshWatchCommand, Mode=OneWay}"                  
+                     
+                      IsRefreshing="{Binding IsBusy, Mode=TwoWay}"              
+
+                    >
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+
+                                    <MenuItem Text="Add To Portfolio" 
+                                          CommandParameter="{Binding .}"
+                                          Clicked="AddToPortfolio_Clicked"
+                            />
+
+
+                                    <MenuItem Text="Delete" 
+                                          CommandParameter="{Binding .}"
+                                          Clicked="DeleteStock_Clicked"
+                                              
+                                       
+                                          
+                            />
+                                </ViewCell.ContextActions>
+
+                                <Grid Padding="35,15,35,15" RowSpacing="0">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"  />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text= "{Binding Symbol}"  
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   FontSize="15" FontAttributes="Bold"
+                                   TextColor="White"
+
+                            />
+                                    <Label Text="{Binding Name}"
+                                   FontSize="10"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   TextColor="White"
+                            />
+
+                                    <Label Text="{Binding Price.Amount,
+                                    StringFormat='{0:0.0000}'}"
+                                   Grid.ColumnSpan="2"
+                                   Grid.Row="0"
+                                   Grid.Column="1"
+                                   FontSize="15"
+                                   HorizontalOptions="End"
+                                   
+                                   TextColor="White"
+                                   
+                            />
+                                    <Label Text="{Binding Change,
+                                    StringFormat='{0:+0.00;-0.00;0.00}'}"
+                                   Grid.Row="1"
+                                   Grid.Column="1"
+                                   FontSize="11"
+                                   TextColor="{Binding PercentChange, 
+                                    Converter={StaticResource TextToColorConverter}}"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="End"
+                            />
+
+                                    <Label Text="{Binding PercentChange, StringFormat='(\{0\}%)'}"
+                                   Grid.Row="1"
+                                   Grid.Column="2"
+                                   FontSize="11" HorizontalOptions="StartAndExpand"
+                                   TextColor="{Binding PercentChange, 
+                                    Converter={StaticResource TextToColorConverter}}"
+                            />
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+
+
+
+
+
+
+                <StackLayout Orientation="Horizontal"  VerticalOptions="End" HorizontalOptions="Center">
+
+                    <StackLayout Orientation="Horizontal" 
+                      
+                         
+                             VerticalOptions="End">
+                        <Label x:Name="mStatus" 
+                                   Text="Auto Update:" 
+                                   TextColor="White"
+                                    HorizontalOptions="Center" 
+                                   VerticalOptions="Center"
+                                   FontSize="Micro" />
+                        <Switch  x:Name="switchAutoUpdate"
+                                      IsToggled="True" 
+                                      HorizontalOptions="Center" 
+                                      />
+                    </StackLayout>
+
+
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                    <Label Text="{Binding StockList[0].LastUpdated,
+                                    StringFormat='Last Updated: {0}'}"                
+                                    x:Name="lblUpdateStatus" 
+                                    FontSize="Micro"
+                                    TextColor="Red"
+                               VerticalOptions="End"
+                                   />
+
+                    <Label Text="{Binding IsConnected}"
+                                           TextColor="{Binding IsConnected, Converter={StaticResource ConnectionColorConverter}}"
+                                           Font="Micro"
+                                        VerticalOptions="End"
+                                        HorizontalOptions="Center"
+                                       />
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

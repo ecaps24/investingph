@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.PortfolioAddEditPage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+             xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"
+
+            Title="{Binding Title}"
+            BackgroundColor="Black"
+            
+             >
+
+    <ContentPage.BindingContext>
+        <ViewModels:PortfolioAddEditViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+            <ResourceDictionary>
+
+                <converters:TextToColorConverter x:Key="TextToColorConverter" />
+
+                <Color x:Key="LabelColor">WhiteSmoke</Color>
+                <Color x:Key="ContentColor">White</Color>
+
+                <Color x:Key="LabelSummaryColor">White</Color>
+                <Color x:Key="ContentSummaryColor">FloralWhite</Color>
+
+
+                <Style x:Key="TextToColorConverterReference" TargetType="Label">
+                    <Setter Property="FontSize" Value="16"/>
+
+                    <Setter Property="TextColor"  Value="{Binding NetGain, Converter={StaticResource TextToColorConverter}}"/>
+
+                </Style>
+
+                <Style x:Key="LabelReference" TargetType="Label">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="TextColor" Value="{StaticResource LabelColor}"/>
+                   
+                </Style>
+
+                <Style x:Key="SymbolReference" TargetType="Label">
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="TextColor" Value="{StaticResource LabelColor}"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                </Style>
+
+                <Style x:Key="ContentReference" TargetType="Label">
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="TextColor" Value="{StaticResource ContentColor}"/>
+
+                </Style>
+
+                <Style x:Key="LabelSummaryReference" TargetType="Label">
+                    <Setter Property="FontSize" Value="16"/>
+                    <Setter Property="TextColor" Value="{StaticResource LabelSummaryColor}"/>
+                    <Setter Property="FontAttributes" Value="Bold"/>
+                </Style>
+
+                <Style x:Key="ContentSummaryReference" TargetType="Label">
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+
+                </Style>
+            </ResourceDictionary>
+        </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <StackLayout Padding="30" Spacing="10" BackgroundColor="#1E252B" >
+
+
+            <Grid Padding="2" RowSpacing="3" Opacity="0.8">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"  />
+                </Grid.ColumnDefinitions>
+
+
+                <Label Text= "{Binding Symbol}"  
+                       x:Name="lblSymbol"
+                       Style="{StaticResource SymbolReference}"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       
+                       />
+                <Label Text="{Binding Name}"
+                       x:Name="lblCompany"
+                       Style="{StaticResource ContentReference}"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                       />
+
+
+
+            </Grid>
+
+
+            <Label Text=""/>
+
+            <StackLayout Orientation="Vertical" Spacing="2" Opacity="0.5">
+                <Label Text="Shares" Style="{StaticResource LabelReference}" />
+                <Entry x:Name="SharesEntry" Text="{Binding TotalShares, Mode=OneWay}" 
+                       Placeholder="Enter number of shares bought" 
+                       PlaceholderColor="{StaticResource LabelColor}"
+                       Keyboard="Numeric" Style="{StaticResource ContentReference}" />
+            </StackLayout>
+
+            <StackLayout  Orientation="Vertical" Spacing="2" Opacity="0.5">
+                <Label Text="Price"
+                       Style="{StaticResource LabelReference}"
+                       />
+                <Entry 
+                        x:Name="EntryAvgPrice"
+                        Placeholder="Enter average price" 
+                       PlaceholderColor="{StaticResource LabelColor}"
+                       Style="{StaticResource ContentReference}"
+                       Keyboard="Numeric"
+                       />
+            </StackLayout>
+
+
+
+
+            <StackLayout Orientation="Vertical" Spacing="2">
+                <Label Text="If stock exists, new shares will be added based on weighted average" TextColor="Red"/>
+                <Button x:Name="btnSave" Text="Add Position" Clicked="AddPosition_Clicked" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

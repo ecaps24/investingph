@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:investingph.Views"
+             x:Class="investingph.Views.HomePage"
+            Title="investing.ph"
+            
+            >
+    <local:StockListPage />
+    <local:WatchListPage/>
+    <local:PortfolioPage/>
+
+</TabbedPage>
+
+
+
+<!--<ContentPage Title="Tab 1" />
+<ContentPage Title="Tab 2" />
+<ContentPage Title="Tab 3" />-->

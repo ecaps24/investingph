@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.RootPage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+             xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"
+
+             xmlns:pages="clr-namespace:investingph.Views"
+             Title="investing.ph">
+
+    <ContentPage.BindingContext>
+
+        <ViewModels:RootViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <MasterDetailPage.ToolbarItems x:Uid="toolbar">
+
+
+
+        <ToolbarItem Text="Search" 
+                     Icon="search.png" 
+                     Clicked="SearchClicked"
+                    x:Name="SearchToolBar"
+                     
+            
+                     />
+
+        <ToolbarItem Text="Add"
+                     Icon="add.png"
+                     x:Name="AddToolBar"
+                     Clicked="AddClicked"
+                     Command="{Binding AddCommand}"
+                     />
+
+    </MasterDetailPage.ToolbarItems>
+
+</MasterDetailPage>

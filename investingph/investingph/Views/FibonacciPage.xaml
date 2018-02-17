@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.FibonacciPage"
+             
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+             xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"
+
+             xmlns:lc="clr-namespace:Xamarin.Forms.Labs.Controls;assembly=Xamarin.Forms.Labs"
+             xmlns:lb="clr-namespace:Xamarin.Forms.Labs.Behaviors;assembly=Xamarin.Forms.Labs"  
+             
+            BackgroundColor="Black"
+            Title="{Binding Title}"
+             
+             >
+
+
+    <ContentPage.BindingContext>
+        <ViewModels:FibonacciViewModel/>
+    </ContentPage.BindingContext>
+
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TextToColorConverter x:Key="TextToColorConverter" />
+
+            <Color x:Key="LabelColor">WhiteSmoke</Color>
+            <Color x:Key="ContentColor">White</Color>
+
+            <Color x:Key="LabelSummaryColor">White</Color>
+            <Color x:Key="ContentSummaryColor">FloralWhite</Color>
+
+
+            <Style x:Key="TextToColorConverterReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{Binding NetGain, 
+                    Converter={StaticResource TextToColorConverter}}"/>
+            </Style>
+            <Style x:Key="LabelReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelColor}"/>
+                
+            </Style>
+
+            <Style x:Key="ContentReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentColor}"/>
+            </Style>
+
+            <Style x:Key="LabelSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelSummaryColor}"/>
+                
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="ContentSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+            </Style>
+
+
+            <Style x:Key="SignReference" TargetType="Label">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+
+        <ScrollView >
+        <StackLayout Padding="20" Spacing="7" 
+                BackgroundColor="#1E252B"
+                    >
+
+
+            <Label Text="Uptrend" 
+                   Style="{StaticResource LabelSummaryReference}"
+                   TextColor="Green"
+                   />
+
+
+            <Grid>
+                
+
+
+                    <Label Text="  -  "
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                           
+                     >
+                        
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding DeductValueCommand}"
+                                CommandParameter="{x:Reference EntryHighPrice}"
+                                
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+                    <Entry Placeholder="Enter High Price"
+                           x:Name="EntryHighPrice"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           Keyboard="Numeric"
+                           Text="{Binding HighPrice, Mode=TwoWay}"
+                           Style="{StaticResource ContentReference}"
+                           PlaceholderColor="{StaticResource LabelColor}"    
+                   />
+
+                    <Label Text="  -  "
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"                           
+                           Style="{StaticResource SignReference}"
+                       >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding DeductValueCommand}"
+                                CommandParameter="{x:Reference EntryLowPrice}"
+                                />
+                        </Label.GestureRecognizers>
+
+                    </Label>
+
+                    <Label Text="  -  "
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"                           
+                           Style="{StaticResource SignReference}"
+                     >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding DeductValueCommand}"
+                                CommandParameter="{x:Reference Custom}"
+                                
+                                />
+                        </Label.GestureRecognizers>
+
+                    </Label>
+
+
+                    <Label Text="+"
+                           Grid.Row="0"
+                           Grid.Column="3"
+                           VerticalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                           >
+                        <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                                Command="{Binding AddValueCommand}"
+                                CommandParameter="{x:Reference EntryHighPrice}"
+                         />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="+"
+                           Grid.Row="1"
+                           Grid.Column="3"
+                           VerticalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                     >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding AddValueCommand}"
+                                CommandParameter="{x:Reference EntryLowPrice}"
+                         />
+                        </Label.GestureRecognizers>
+
+                    </Label>
+
+                    <Label Text="+"
+                           Grid.Row="2"
+                           Grid.Column="3"
+                           VerticalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                     >
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding AddValueCommand}"
+                                CommandParameter="{x:Reference Custom}"
+                         />
+                        </Label.GestureRecognizers>
+
+                    </Label>
+
+
+
+
+                    <Label Text="High Price"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   VerticalOptions="Center"
+                             Style="{StaticResource LabelReference}"
+                       />
+
+
+
+                <Label Text="Low Price"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                    VerticalOptions="Center"
+                   Style="{StaticResource LabelReference}"  
+                       
+                   />
+
+                <Entry Placeholder="Enter Low Price"
+                   x:Name="EntryLowPrice"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   Keyboard="Numeric"
+                   Style="{StaticResource ContentReference}"                       
+                   Text="{Binding LowPrice, Mode=TwoWay}"
+                   PlaceholderColor="{StaticResource LabelColor}"                         
+                      
+               />
+
+                <Label Text="Custom/Pullback (Optional)"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   VerticalOptions="Center"     
+                   Style="{StaticResource LabelReference}"                        
+                   />
+
+                <Entry Placeholder="Enter Pullback Price "
+                   x:Name="Custom"
+                   Grid.Row="2"
+                   Grid.Column="2"
+                   Keyboard="Numeric"
+                   Text="{Binding Custom, Mode=TwoWay}"
+                   Style="{StaticResource ContentReference}"  
+                   PlaceholderColor="{StaticResource LabelColor}"                         
+ 
+                   />
+            </Grid>
+
+
+
+
+
+            <Grid RowSpacing="3" Opacity="0.8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+
+                </Grid.ColumnDefinitions>
+
+                <!--retracement label-->
+
+                <Label Text="Retracements"
+                   Grid.Row="0" 
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource LabelSummaryReference}"  
+                   HorizontalOptions="Center"    
+                   TextColor="Green"    
+                       />
+
+                <Label Text="0%"
+                   Grid.Row="1" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"
+                       
+                   />
+
+                <Label Text="23.6%"
+                   Grid.Row="2" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"
+                   />
+
+                <Label Text="38.2%"
+                   Grid.Row="3" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"
+                   />
+                <Label Text="50%"
+                   Grid.Row="4" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"
+                   />
+                <Label Text="61.8%"
+                   Grid.Row="5" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"
+                   />
+                <Label Text="76.4%"
+                   Grid.Row="6" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"
+                   />
+                <Label Text="100%"
+                   Grid.Row="7" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"                       
+                   />
+                <Label Text="138.2%"
+                   Grid.Row="8" 
+                   Grid.Column="0"
+                   Style="{StaticResource LabelReference}"
+                   />
+
+                
+                
+                <!--output-->
+
+                <Label x:Name="Retrace0"
+                   Text="{Binding Retrace0}"
+                   Grid.Row="1" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"                       
+                       
+                    />
+
+                <Label x:Name="Retrace236"
+                   Text="{Binding Retrace236}"
+                   Grid.Row="2" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"
+                    />
+
+                <Label x:Name="Retrace382"
+                   Text="{Binding Retrace382}"
+                   Grid.Row="3" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"
+                    />
+
+                <Label x:Name="Retrace50"
+                   Text="{Binding Retrace50}"
+                   Grid.Row="4" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"
+                   TextColor="GreenYellow"       
+                       
+                    />
+
+                <Label x:Name="Retrace618"
+                   Text="{Binding Retrace618}"
+                   Grid.Row="5" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"
+                   TextColor="Green"                           
+                    />
+
+                <Label x:Name="Retrace764"
+                   Text="{Binding Retrace764}"
+                   Grid.Row="6" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"
+                    />
+
+                <Label x:Name="Retrace100"
+                   Text="{Binding Retrace100}"
+                   Grid.Row="7" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"
+                    />
+
+                <Label x:Name="Retrace1382"
+                   Text="{Binding Retrace1382}"
+                   Grid.Row="8" 
+                   Grid.Column="1"  
+                   Style="{StaticResource ContentReference}"
+                    />
+
+                <!--Extensions-->
+
+                <Label Text="Extensions"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   Style="{StaticResource LabelSummaryReference}"
+                   HorizontalOptions="Center"  
+                   TextColor="Red"                       
+                />
+
+
+                <Label Text="261.8%"
+                   Grid.Row="1" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+                />
+
+                <Label Text="200%"
+                   Grid.Row="2" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+                />
+
+                <Label Text="161.8%"
+                   Grid.Row="3" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"                       
+                   />
+
+                <Label Text="138.2%"
+                   Grid.Row="4" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+                />
+
+                <Label Text="100%"
+                   Grid.Row="5" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+                />
+
+                <Label Text="61.8%"
+                   Grid.Row="6" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+                />
+
+                <Label Text="50%"
+                   Grid.Row="7" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+
+                />
+
+                <Label Text="38.2%"
+                   Grid.Row="8" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+                />
+
+                <Label Text="23.6%"
+                   Grid.Row="9" 
+                   Grid.Column="2"
+                   Style="{StaticResource LabelReference}"
+                />
+
+
+                <!--output-->
+
+                <Label x:Name="Ext2618"
+                   Text="{Binding Extension2618}"
+                   Grid.Row="1" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}"                        
+                    />
+
+                <Label x:Name="Ext200"
+                   Text="{Binding Extension200}"
+                   Grid.Row="2" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+                <Label x:Name="Ext1618"
+                   Text="{Binding Extension1618}"
+                   Grid.Row="3" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+                <Label x:Name="Ext1382"
+                   Text="{Binding Extension1382}"
+                   Grid.Row="4" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+                <Label x:Name="Ext100"
+                   Text="{Binding Extension100}"
+                   Grid.Row="5" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+                <Label x:Name="Ext618"
+                   Text="{Binding Extension618}"
+                   Grid.Row="6" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+                <Label x:Name="Ext50"
+                   Text="{Binding Extension50}"
+                   Grid.Row="7" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+                <Label x:Name="Ext382"
+                   Text="{Binding Extension382}"
+                   Grid.Row="8" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+                <Label x:Name="Ext236"
+                   Text="{Binding Extension236}"
+                   Grid.Row="9" 
+                   Grid.Column="3"  
+                   Style="{StaticResource ContentReference}" 
+                />
+
+            </Grid>
+
+
+
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+
+</ContentPage>

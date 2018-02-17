@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.PortfolioPage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+            xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"
+            Title="{Binding Title}"
+             BackgroundColor="Black"             
+             >
+    <ContentPage.BindingContext>
+        <ViewModels:PortfolioViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TextToColorConverter x:Key="TextToColorConverter" />
+
+            <Color x:Key="LabelColor">WhiteSmoke</Color>
+            <Color x:Key="ContentColor">White</Color>
+
+            <Color x:Key="LabelSummaryColor">White</Color>
+            <Color x:Key="ContentSummaryColor">FloralWhite</Color>
+
+
+            <Style x:Key="TextToColorConverterReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{Binding NetGain, 
+                    Converter={StaticResource TextToColorConverter}}"/>
+            </Style>
+            <Style x:Key="LabelReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelColor}"/>
+
+            </Style>
+
+            <Style x:Key="ContentReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentColor}"/>
+            </Style>
+
+            <Style x:Key="LabelSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelSummaryColor}"/>
+
+            </Style>
+
+            <Style x:Key="ContentSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+
+
+        <StackLayout HorizontalOptions="Fill"
+                Grid.Row="0" 
+                BackgroundColor="#1E252B"
+                Opacity="0.85"
+                Spacing="10"
+                Padding="10"
+                     >
+
+            <StackLayout Orientation="Horizontal"
+                        VerticalOptions="End"
+                         HorizontalOptions="Start"
+                         Opacity="0.8"
+                         Spacing="5"
+                        Padding="30,0,0,0"
+                         >
+
+                <Label Text="As of: "
+                       Style="{StaticResource LabelSummaryReference}"  
+                       />
+
+                <Label Text="{Binding AsOf}"
+                       Style="{StaticResource LabelSummaryReference}"  
+                       />
+
+                <Switch  x:Name="switchAutoUpdate"
+                        IsToggled="True" 
+                        HorizontalOptions="Center" 
+                        IsVisible="False"
+                />
+
+
+            </StackLayout>
+
+
+            <Grid ColumnSpacing="20" Padding="10" 
+				  HorizontalOptions="Center" 
+				  VerticalOptions="Start"
+                  BackgroundColor="Black"
+                  Opacity="0.6">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"  />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Current Value:" 
+
+                           Grid.Row="0"
+                           Style="{StaticResource LabelSummaryReference}"  
+                           />
+
+                <Label Text="{Binding NetTotal, StringFormat='{}{0:0,0.00}'}}" 
+                           Grid.Column="1"
+                           Style="{StaticResource ContentSummaryReference}"
+                           />
+
+                <Label Text="Gain/Loss:" 
+                           Style="{StaticResource LabelSummaryReference}"  
+                           Grid.Row="1"
+                           />
+
+                <Label Text="{Binding GainLoss, StringFormat='{}{0:0,0.00}'}}" 
+                           Grid.Column="1" Grid.Row="1"
+                           TextColor="{Binding GainLoss, Converter={StaticResource TextToColorConverter}}" FontSize="12"
+                           />
+
+                <Label Text="Original Value: " 
+                           Style="{StaticResource LabelSummaryReference}"  
+                           Grid.Row="0" Grid.Column="2"
+                           />
+
+                <Label Text="{Binding OriginalValue, StringFormat='{}{0:0,0.00}'}}" 
+                           Grid.Column="3" Grid.Row="0"
+                           Style="{StaticResource ContentSummaryReference}"/>
+
+                <Label Text="%Gain " 
+                           Style="{StaticResource LabelSummaryReference}"  
+                           Grid.Row="1" Grid.Column="2"
+                           />
+
+                <Label Text="{Binding PercentGainLoss, StringFormat='\{0\}%'}"
+                           Grid.Column="3" Grid.Row="1"
+                           TextColor="{Binding GainLoss, Converter={StaticResource TextToColorConverter}}" FontSize="12"
+                           />
+
+            </Grid>
+
+            <ListView ItemsSource="{Binding PortfolioList}"
+                        HasUnevenRows="True"
+                      x:Name="lstPortfolio"
+                      BackgroundColor="#1E252B"
+                      SeparatorColor="Black"
+                      IsPullToRefreshEnabled="True"
+                      SeparatorVisibility="Default"  
+                      RefreshCommand="{Binding RefreshPortfolioCommand}"
+                     IsRefreshing="{Binding IsBusy, Mode=TwoWay}"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Delete" 
+                                      CommandParameter="{Binding .}" 
+                                      Command="{Binding DeletePortfolio_Clicked}"
+                                       Clicked="DeletePortfolio_Clicked"
+                                      />
+                                <MenuItem Text="Edit" 
+                                      CommandParameter="{Binding .}"
+                                      Command="{Binding EditPortfolioItem}"
+                                      Clicked="UpdatePortfolio_Clicked"                               
+                                       />
+                            </ViewCell.ContextActions>
+
+                            <Grid HorizontalOptions="Center" 
+                                  Padding="15" RowSpacing="5" 
+
+                                  ColumnSpan="6" 
+                                  ColumnSpacing="10"
+                                  Opacity="0.8">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"  />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="Auto"  />
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <Label Text="Stock: " 
+                                       Grid.Row="0" Grid.Column="0" 
+                                       Style="{StaticResource LabelReference}" />
+                                <Label Text= "{Binding Symbol}"  
+                                       Grid.Row="0" Grid.Column="1"
+                                       Style="{StaticResource ContentReference}"/>
+
+                                <Label Text="Market Price:" 
+                                       Grid.Row="1" Grid.Column="0"
+                                       Style="{StaticResource LabelReference}" />
+                                <Label Text="{Binding Price, StringFormat='{0:0.0000}'}" 
+                                       Grid.Row="1" Grid.Column="1" 
+                                       Style="{StaticResource ContentReference}"  />
+                                <Label Text="Average Price:"
+                                       Style="{StaticResource LabelReference}"
+                                       Grid.Row="2" Grid.Column="0" />
+                                <Label Text="{Binding AveragePrice, StringFormat='{0:0.0000}'}" 
+                                       Grid.Row="2" Grid.Column="1" 
+                                       Style="{StaticResource ContentReference}"  />
+                                <Label Text="Shares:"
+                                       Style="{StaticResource LabelReference}" 
+                                       Grid.Row="0" Grid.Column="2" />
+                                <Label Text="{Binding TotalShares , StringFormat='{}{0:0,0}'}" 
+                                       Grid.Row="0" Grid.Column="3" 
+                                       Style="{StaticResource ContentReference}" />
+                                <Label Text="Current Value:"
+                                       Style="{StaticResource LabelReference}" 
+                                       Grid.Row="1" Grid.Column="2" />
+                                <Label Text="{Binding NetMarketValue, StringFormat='{}{0:0,0.00}'}}" 
+                                       Grid.Row="1" Grid.Column="3"
+                                       Style="{StaticResource ContentReference}"  />
+                                <Label Text="Original Value:" Style="{StaticResource LabelReference}"  
+                                       Grid.Row="2" Grid.Column="2" />
+                                <Label Text="{Binding OriginalMarketValue, StringFormat='{}{0:0,0.00}'}}" 
+                                       Grid.Row="2" Grid.Column="3" 
+                                       Style="{StaticResource ContentReference}" />
+
+                                <Label Text="Gain/Loss: " 
+                                       Grid.Row="3"
+                                       Style="{StaticResource LabelReference}"  />
+                                <Label Text="{Binding NetGain, StringFormat='{0:0.00}'}" 
+                                       Grid.Row="3" Grid.Column="1" 
+                                       FontAttributes="Bold"
+                                       Style="{StaticResource TextToColorConverterReference}" />
+                                <Label Text="{Binding PercentGain, StringFormat='\{0\}%'}"
+                                       Grid.Row="3" Grid.Column="3"
+                                       Style="{StaticResource TextToColorConverterReference}"
+                                       FontAttributes="Bold"/>
+                                <Label Text="%Gain: "
+                                       Grid.Row="3" Grid.Column="2" 
+                                       Style="{StaticResource LabelReference}"
+                                       />
+
+
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,1190 @@
+﻿[
+ {
+   "Symbol": "2GO",
+   "Name": "2GO Group, Inc."
+ },
+ {
+   "Symbol": "AAA",
+   "Name": "Asia Amalgamated Holdings Corp."
+ },
+ {
+   "Symbol": "AB",
+   "Name": "Atok-Big Wedge Company, Inc."
+ },
+ {
+   "Symbol": "ABA",
+   "Name": "AbaCore Capital Holdings, Inc."
+ },
+ {
+   "Symbol": "ABG",
+   "Name": "Asiabest Group International, Inc."
+ },
+ {
+   "Symbol": "ABS",
+   "Name": "ABS-CBN Corporation"
+ },
+ {
+   "Symbol": "ABSP",
+   "Name": "ABS-CBN Holdings Corporation PDR"
+ },
+ {
+   "Symbol": "AC",
+   "Name": "Ayala Corporation"
+ },
+ {
+   "Symbol": "ACE",
+   "Name": "Acesite (Phils.) Hotel Corp."
+ },
+ {
+   "Symbol": "ACPA",
+   "Name": "Ayala Corporation Preferred Class A"
+ },
+ {
+   "Symbol": "ACPB2",
+   "Name": "Ayala Corp. Class B Series 2 Pref."
+ },
+ {
+   "Symbol": "ACR",
+   "Name": "Alsons Consolidated Resources, Inc."
+ },
+ {
+   "Symbol": "AEV",
+   "Name": "Aboitiz Equity Ventures, Inc."
+ },
+ {
+   "Symbol": "AGF",
+   "Name": "AG Finance, Incorporated"
+ },
+ {
+   "Symbol": "AGI",
+   "Name": "Alliance Global Group, Inc."
+ },
+ {
+   "Symbol": "ALCO",
+   "Name": "Arthaland Corporation"
+ },
+ {
+   "Symbol": "ALCPB",
+   "Name": "Arthaland Corp. Perpetual Pref B"
+ },
+ {
+   "Symbol": "ALHI",
+   "Name": "Anchor Land Holdings, Inc."
+ },
+ {
+   "Symbol": "ALI",
+   "Name": "Ayala Land, Inc."
+ },
+ {
+   "Symbol": "ANI",
+   "Name": "AgriNurture, Inc."
+ },
+ {
+   "Symbol": "ANS",
+   "Name": "A. Soriano Corporation"
+ },
+ {
+   "Symbol": "AP",
+   "Name": "Aboitiz Power Corporation"
+ },
+ {
+   "Symbol": "APC",
+   "Name": "APC Group, Inc."
+ },
+ {
+   "Symbol": "APL",
+   "Name": "Apollo Global Capital, Inc."
+ },
+ {
+   "Symbol": "APO",
+   "Name": "Anglo-Philippine Holdings Corporation"
+ },
+ {
+   "Symbol": "APX",
+   "Name": "Apex Mining Company, Inc."
+ },
+ {
+   "Symbol": "AR",
+   "Name": "Abra Mining and Industrial Corp."
+ },
+ {
+   "Symbol": "ARA",
+   "Name": "Araneta Properties, Inc."
+ },
+ {
+   "Symbol": "AT",
+   "Name": "Atlas Cons. Mining and Dev't Corp."
+ },
+ {
+   "Symbol": "ATI",
+   "Name": "Asian Terminals, Inc."
+ },
+ {
+   "Symbol": "ATN",
+   "Name": "ATN Holdings, Inc. A"
+ },
+ {
+   "Symbol": "ATNB",
+   "Name": "ATN Holdings, Inc. B"
+ },
+ {
+   "Symbol": "AUB",
+   "Name": "Asia United Bank Corporation"
+ },
+ {
+   "Symbol": "BC",
+   "Name": "Benguet Corporation A"
+ },
+ {
+   "Symbol": "BCB",
+   "Name": "Benguet Corporation B"
+ },
+ {
+   "Symbol": "BCOR",
+   "Name": "Berjaya Philippines, Inc."
+ },
+ {
+   "Symbol": "BCP",
+   "Name": "Benguet Corporation Conv. Pref. A"
+ },
+ {
+   "Symbol": "BDO",
+   "Name": "BDO Unibank, Inc."
+ },
+ {
+   "Symbol": "BEL",
+   "Name": "Belle Corporation"
+ },
+ {
+   "Symbol": "BH",
+   "Name": "BHI Holdings, Inc."
+ },
+ {
+   "Symbol": "BHI",
+   "Name": "Boulevard Holdings, Inc."
+ },
+ {
+   "Symbol": "BKR",
+   "Name": "Bright Kindle Res. and Investments, Inc."
+ },
+ {
+   "Symbol": "BLFI",
+   "Name": "BDO Leasing and Finance, Inc."
+ },
+ {
+   "Symbol": "BLOOM",
+   "Name": "Bloomberry Resorts Corporation"
+ },
+ {
+   "Symbol": "BMM",
+   "Name": "Bogo Medellin Milling Company"
+ },
+ {
+   "Symbol": "BPI",
+   "Name": "Bank of the Philippine Islands"
+ },
+ {
+   "Symbol": "BRN",
+   "Name": "A Brown Company, Inc."
+ },
+ {
+   "Symbol": "BSC",
+   "Name": "Basic Energy Corporation"
+ },
+ {
+   "Symbol": "CA",
+   "Name": "Concrete Aggregates Corp. A"
+ },
+ {
+   "Symbol": "CAB",
+   "Name": "Concrete Aggregates Corp. B"
+ },
+ {
+   "Symbol": "CAT",
+   "Name": "Central Azucarera De Tarlac"
+ },
+ {
+   "Symbol": "CDC",
+   "Name": "Cityland Development Corporation"
+ },
+ {
+   "Symbol": "CEB",
+   "Name": "Cebu Air, Inc."
+ },
+ {
+   "Symbol": "CEI",
+   "Name": "Crown Equities, Inc."
+ },
+ {
+   "Symbol": "CEU",
+   "Name": "Centro Escolar University"
+ },
+ {
+   "Symbol": "CHI",
+   "Name": "Cebu Holdings, Inc."
+ },
+ {
+   "Symbol": "CHIB",
+   "Name": "China Banking Corporation"
+ },
+ {
+   "Symbol": "CHP",
+   "Name": "Cemex Holdings Philippines, Inc."
+ },
+ {
+   "Symbol": "CIC",
+   "Name": "Concepcion Industrial Corporation"
+ },
+ {
+   "Symbol": "CIP",
+   "Name": "Chemical Industries of the Phils."
+ },
+ {
+   "Symbol": "CLC",
+   "Name": "Chelsea Logistics Holdings Corp."
+ },
+ {
+   "Symbol": "CLI",
+   "Name": "Cebu Landmasters, Inc."
+ },
+ {
+   "Symbol": "CNPF",
+   "Name": "Century Pacific Food, Inc."
+ },
+ {
+   "Symbol": "COAL",
+   "Name": "Coal Asia Holdings, Inc."
+ },
+ {
+   "Symbol": "COL",
+   "Name": "COL Financial Group, Inc."
+ },
+ {
+   "Symbol": "COSCO",
+   "Name": "Cosco Capital, Inc."
+ },
+ {
+   "Symbol": "CPG",
+   "Name": "Century Properties Group, Inc."
+ },
+ {
+   "Symbol": "CPM",
+   "Name": "Century Peak Metals Holdings Corporation"
+ },
+ {
+   "Symbol": "CPV",
+   "Name": "Cebu Property Venture and Dev't Corp.A"
+ },
+ {
+   "Symbol": "CPVB",
+   "Name": "Cebu Property Venture and Dev't Corp.B"
+ },
+ {
+   "Symbol": "CROWN",
+   "Name": "Crown Asia Chemicals Corporation"
+ },
+ {
+   "Symbol": "CSB",
+   "Name": "Citystate Savings Bank"
+ },
+ {
+   "Symbol": "CYBR",
+   "Name": "Cyber Bay Corporation"
+ },
+ {
+   "Symbol": "DAVIN",
+   "Name": "Da Vinci Capital Holdings, Inc."
+ },
+ {
+   "Symbol": "DD",
+   "Name": "DoubleDragon Properties Corp."
+ },
+ {
+   "Symbol": "DDPR",
+   "Name": "DoubleDragon Properties Corp. Pref."
+ },
+ {
+   "Symbol": "DFNN",
+   "Name": "DFNN, Inc."
+ },
+ {
+   "Symbol": "DIZ",
+   "Name": "Dizon Copper Silver Mines, Inc."
+ },
+ {
+   "Symbol": "DMC",
+   "Name": "DMCI Holdings, Inc."
+ },
+ {
+   "Symbol": "DMPL",
+   "Name": "Del Monte Pacific Limited"
+ },
+ {
+   "Symbol": "DNA",
+   "Name": "Philab Holdings Corp."
+ },
+ {
+   "Symbol": "DNL",
+   "Name": "D and L Industries, Inc."
+ },
+ {
+   "Symbol": "DWC",
+   "Name": "Discovery World Corporation"
+ },
+ {
+   "Symbol": "EAGLE",
+   "Name": "Eagle Cement Corporation"
+ },
+ {
+   "Symbol": "ECP",
+   "Name": "Easycall Comm. Phils., Inc."
+ },
+ {
+   "Symbol": "EDC",
+   "Name": "Energy Development Corporation"
+ },
+ {
+   "Symbol": "EEI",
+   "Name": "EEI Corporation"
+ },
+ {
+   "Symbol": "EG",
+   "Name": "IP E-Game Ventures Inc."
+ },
+ {
+   "Symbol": "ELI",
+   "Name": "Empire East Land Holdings, Inc."
+ },
+ {
+   "Symbol": "EMP",
+   "Name": "Emperador Inc."
+ },
+ {
+   "Symbol": "EURO",
+   "Name": "Euro-Med Laboratories Phil., Inc."
+ },
+ {
+   "Symbol": "EVER",
+   "Name": "Ever Gotesco Resources and Hold'gs, Inc."
+ },
+ {
+   "Symbol": "EW",
+   "Name": "East West Banking Corporation"
+ },
+ {
+   "Symbol": "FAF",
+   "Name": "First Abacus Financial Holdings Corp."
+ },
+ {
+   "Symbol": "FDC",
+   "Name": "Filinvest Development Corporation"
+ },
+ {
+   "Symbol": "FEU",
+   "Name": "Far Eastern University, Inc."
+ },
+ {
+   "Symbol": "FFI",
+   "Name": "Filipino Fund, Inc."
+ },
+ {
+   "Symbol": "FGEN",
+   "Name": "First Gen Corporation"
+ },
+ {
+   "Symbol": "FGENF",
+   "Name": "First Gen Corporation - Preferred"
+ },
+ {
+   "Symbol": "FGENG",
+   "Name": "First Gen Corporation - Series G Pref."
+ },
+ {
+   "Symbol": "FJP",
+   "Name": "F and J Prince Holdings Corp. A"
+ },
+ {
+   "Symbol": "FJPB",
+   "Name": "F and J Prince Holdings Corp. B"
+ },
+ {
+   "Symbol": "FLI",
+   "Name": "Filinvest Land, Inc."
+ },
+ {
+   "Symbol": "FMETF",
+   "Name": "First Metro Philippine Equity ETF"
+ },
+ {
+   "Symbol": "FNI",
+   "Name": "Global Ferronickel Holdings, Inc."
+ },
+ {
+   "Symbol": "FOOD",
+   "Name": "Alliance Select Foods Int'l, Inc."
+ },
+ {
+   "Symbol": "FPH",
+   "Name": "First Phil. Holdings Corp."
+ },
+ {
+   "Symbol": "FPHP",
+   "Name": "First Phil. Holdings Corp. Pref Series B"
+ },
+ {
+   "Symbol": "FPI",
+   "Name": "Forum Pacific, Inc."
+ },
+ {
+   "Symbol": "GEO",
+   "Name": "GEOGRACE Resources Philippines, Inc."
+ },
+ {
+   "Symbol": "GERI",
+   "Name": "Global-Estate Resorts, Inc."
+ },
+ {
+   "Symbol": "GLO",
+   "Name": "Globe Telecom, Inc."
+ },
+ {
+   "Symbol": "GLOPA",
+   "Name": "Globe Telecom, Inc - Preferred A"
+ },
+ {
+   "Symbol": "GLOPP",
+   "Name": "Globe Telecom, Inc. - Perpetual Pref."
+ },
+ {
+   "Symbol": "GMA7",
+   "Name": "GMA Network, Inc."
+ },
+ {
+   "Symbol": "GMAP",
+   "Name": "GMA Holdings, Inc. PDR"
+ },
+ {
+   "Symbol": "GPH",
+   "Name": "Grand Plaza Hotel Corporation"
+ },
+ {
+   "Symbol": "GREEN",
+   "Name": "Greenergy Holdings, Inc."
+ },
+ {
+   "Symbol": "GSMI",
+   "Name": "Ginebra San Miguel Inc."
+ },
+ {
+   "Symbol": "GTCAP",
+   "Name": "GT Capital Holdings, Inc."
+ },
+ {
+   "Symbol": "GTPPA",
+   "Name": "GT Capital Non-Voting Perpetual Pref A"
+ },
+ {
+   "Symbol": "GTPPB",
+   "Name": "GT Capital Non-Voting Perpetual Pref B"
+ },
+ {
+   "Symbol": "H2O",
+   "Name": "Philippine H2O Ventures Corporation"
+ },
+ {
+   "Symbol": "HI",
+   "Name": "House of Investments, Inc."
+ },
+ {
+   "Symbol": "HLCM",
+   "Name": "Holcim Philippines, Inc."
+ },
+ {
+   "Symbol": "HOUSE",
+   "Name": "8990 Holdings, Inc."
+ },
+ {
+   "Symbol": "HVN",
+   "Name": "Golden Haven Memorial Park, Inc."
+ },
+ {
+   "Symbol": "I",
+   "Name": "I-Remit, Inc."
+ },
+ {
+   "Symbol": "ICT",
+   "Name": "Int'l Container Terminal Services, Inc."
+ },
+ {
+   "Symbol": "IDC",
+   "Name": "Italpinas Development Corporation"
+ },
+ {
+   "Symbol": "IMI",
+   "Name": "Integrated Micro-Electronics, Inc."
+ },
+ {
+   "Symbol": "IMP",
+   "Name": "Imperial Resources, Inc."
+ },
+ {
+   "Symbol": "ION",
+   "Name": "Ionics, Inc."
+ },
+ {
+   "Symbol": "IPM",
+   "Name": "IPM Holdings, Inc."
+ },
+ {
+   "Symbol": "IPO",
+   "Name": "iPeople, Inc."
+ },
+ {
+   "Symbol": "IRC",
+   "Name": "IRC Properties, Inc."
+ },
+ {
+   "Symbol": "IS",
+   "Name": "Island Information and Technology, Inc."
+ },
+ {
+   "Symbol": "ISM",
+   "Name": "ISM Communications Corporation"
+ },
+ {
+   "Symbol": "JAS",
+   "Name": "Jackstones, Inc."
+ },
+ {
+   "Symbol": "JFC",
+   "Name": "Jollibee Foods Corporation"
+ },
+ {
+   "Symbol": "JGS",
+   "Name": "JG Summit Holdings, Inc."
+ },
+ {
+   "Symbol": "JOH",
+   "Name": "Jolliville Holdings Corporation"
+ },
+ {
+   "Symbol": "KEP",
+   "Name": "Keppel Philippines Properties, Inc."
+ },
+ {
+   "Symbol": "KPH",
+   "Name": "Keppel Philippines Holdings, Inc. A"
+ },
+ {
+   "Symbol": "KPHB",
+   "Name": "Keppel Philippines Holdings, Inc. B"
+ },
+ {
+   "Symbol": "LAND",
+   "Name": "City and Land Developers, Inc."
+ },
+ {
+   "Symbol": "LBC",
+   "Name": "LBC Express Holdings, Inc."
+ },
+ {
+   "Symbol": "LC",
+   "Name": "Lepanto Consolidated Mining Co. A"
+ },
+ {
+   "Symbol": "LCB",
+   "Name": "Lepanto Consolidated Mining Co. B"
+ },
+ {
+   "Symbol": "LFM",
+   "Name": "Liberty Flour Mills, Inc."
+ },
+ {
+   "Symbol": "LIHC",
+   "Name": "Lodestar Investment Hldgs Corp."
+ },
+ {
+   "Symbol": "LMG",
+   "Name": "LMG Chemicals Corporation"
+ },
+ {
+   "Symbol": "LOTO",
+   "Name": "Pacific Online Systems Corporation"
+ },
+ {
+   "Symbol": "LPZ",
+   "Name": "Lopez Holdings Corporation"
+ },
+ {
+   "Symbol": "LR",
+   "Name": "Leisure and Resorts World Corporation"
+ },
+ {
+   "Symbol": "LRP",
+   "Name": "Leisure and Resorts World Corp.-Pref"
+ },
+ {
+   "Symbol": "LRW",
+   "Name": "Leisure and Resorts World Corp.-Warrants"
+ },
+ {
+   "Symbol": "LSC",
+   "Name": "Lorenzo Shipping Corporation"
+ },
+ {
+   "Symbol": "LTG",
+   "Name": "LT Group, Inc."
+ },
+ {
+   "Symbol": "MA",
+   "Name": "Manila Mining Corporation A"
+ },
+ {
+   "Symbol": "MAB",
+   "Name": "Manila Mining Corporation B"
+ },
+ {
+   "Symbol": "MAC",
+   "Name": "Macroasia Corporation"
+ },
+ {
+   "Symbol": "MACAY",
+   "Name": "Macay Holdings, Inc."
+ },
+ {
+   "Symbol": "MARC",
+   "Name": "Marcventures Holdings, Inc."
+ },
+ {
+   "Symbol": "MAXS",
+   "Name": "Max's Group, Inc."
+ },
+ {
+   "Symbol": "MB",
+   "Name": "Manila Bulletin Publishing Corp."
+ },
+ {
+   "Symbol": "MBC",
+   "Name": "Manila Broadcasting Company"
+ },
+ {
+   "Symbol": "MBT",
+   "Name": "Metropolitan Bank and Trust Company"
+ },
+ {
+   "Symbol": "MED",
+   "Name": "MEDCO Holdings, Inc."
+ },
+ {
+   "Symbol": "MEG",
+   "Name": "Megaworld Corporation"
+ },
+ {
+   "Symbol": "MER",
+   "Name": "Manila Electric Company"
+ },
+ {
+   "Symbol": "MFC",
+   "Name": "Manulife Financial Corporation"
+ },
+ {
+   "Symbol": "MFIN",
+   "Name": "Makati Finance Corporation"
+ },
+ {
+   "Symbol": "MG",
+   "Name": "Millenium Global Holdings, Inc."
+ },
+ {
+   "Symbol": "MHC",
+   "Name": "Mabuhay Holdings Corporation"
+ },
+ {
+   "Symbol": "MJC",
+   "Name": "Manila Jockey Club, Inc."
+ },
+ {
+   "Symbol": "MJIC",
+   "Name": "MJC Investments Corporation"
+ },
+ {
+   "Symbol": "MPI",
+   "Name": "Metro Pacific Investments Corporation"
+ },
+ {
+   "Symbol": "MRC",
+   "Name": "MRC Allied, Inc."
+ },
+ {
+   "Symbol": "MRP",
+   "Name": "Melco Resorts and Entertainment (Phils.)"
+ },
+ {
+   "Symbol": "MRSGI",
+   "Name": "Metro Retail Stores Group, Inc."
+ },
+ {
+   "Symbol": "MVC",
+   "Name": "Mabuhay Vinyl Corporation"
+ },
+ {
+   "Symbol": "MWC",
+   "Name": "Manila Water Company, Inc."
+ },
+ {
+   "Symbol": "MWIDE",
+   "Name": "Megawide Construction Corporation"
+ },
+ {
+   "Symbol": "MWP",
+   "Name": "Megawide Const. Corp. - Perpetual Pref."
+ },
+ {
+   "Symbol": "NI",
+   "Name": "NiHAO Minerals Resources Int'l, Inc."
+ },
+ {
+   "Symbol": "NIKL",
+   "Name": "Nickel Asia Corporation"
+ },
+ {
+   "Symbol": "NOW",
+   "Name": "Now Corporation"
+ },
+ {
+   "Symbol": "NRCP",
+   "Name": "National Reinsurance Corp. of the Phils."
+ },
+ {
+   "Symbol": "OM",
+   "Name": "Omico Corporation"
+ },
+ {
+   "Symbol": "OPM",
+   "Name": "Oriental Pet. and Minerals Corp. A"
+ },
+ {
+   "Symbol": "OPMB",
+   "Name": "Oriental Pet. and Minerals Corp. B"
+ },
+ {
+   "Symbol": "ORE",
+   "Name": "Oriental Peninsula Resources Group, Inc."
+ },
+ {
+   "Symbol": "OV",
+   "Name": "The Philodrill Corporation"
+ },
+ {
+   "Symbol": "PA",
+   "Name": "Pacifica, Inc."
+ },
+ {
+   "Symbol": "PAL",
+   "Name": "PAL Holdings Inc."
+ },
+ {
+   "Symbol": "PAX",
+   "Name": "Paxys, Inc."
+ },
+ {
+   "Symbol": "PBB",
+   "Name": "Philippine Business Bank"
+ },
+ {
+   "Symbol": "PBC",
+   "Name": "Philippine Bank of Communications"
+ },
+ {
+   "Symbol": "PCOR",
+   "Name": "Petron Corporation"
+ },
+ {
+   "Symbol": "PERC",
+   "Name": "Petroenergy Resources Corporation"
+ },
+ {
+   "Symbol": "PF",
+   "Name": "San Miguel Pure Foods Company Inc."
+ },
+ {
+   "Symbol": "PFP",
+   "Name": "San Miguel Pure Foods Preferred"
+ },
+ {
+   "Symbol": "PFP2",
+   "Name": "San Miguel Pure Foods Perpetual Pref. 2"
+ },
+ {
+   "Symbol": "PGOLD",
+   "Name": "Puregold Price Club, Inc."
+ },
+ {
+   "Symbol": "PHA",
+   "Name": "Premiere Horizon Alliance Corporation"
+ },
+ {
+   "Symbol": "PHEN",
+   "Name": "PHINMA Energy Corporation"
+ },
+ {
+   "Symbol": "PHES",
+   "Name": "Phil. Estates Corporation"
+ },
+ {
+   "Symbol": "PHN",
+   "Name": "Phinma Corporation"
+ },
+ {
+   "Symbol": "PIP",
+   "Name": "Pepsi-Cola Products Philippines, Inc."
+ },
+ {
+   "Symbol": "PIZZA",
+   "Name": "Shakey's Pizza Asia Ventures, Inc."
+ },
+ {
+   "Symbol": "PLC",
+   "Name": "Premium Leisure Corp."
+ },
+ {
+   "Symbol": "PMPC",
+   "Name": "Panasonic Manufacturing Phils. Corp."
+ },
+ {
+   "Symbol": "PNB",
+   "Name": "Philippine National Bank"
+ },
+ {
+   "Symbol": "PNX",
+   "Name": "Phoenix Petroleum Philippines, Inc."
+ },
+ {
+   "Symbol": "PNX3A",
+   "Name": "Phoenix Petroleum - Non-Voting Pref. 3A"
+ },
+ {
+   "Symbol": "PNX3B",
+   "Name": "Phoenix Petroleum - Non-Voting Pref. 3B"
+ },
+ {
+   "Symbol": "POPI",
+   "Name": "Prime Orion Philippines, Inc."
+ },
+ {
+   "Symbol": "PORT",
+   "Name": "Globalport 900, Inc."
+ },
+ {
+   "Symbol": "PPC",
+   "Name": "Pryce Corporation"
+ },
+ {
+   "Symbol": "PPG",
+   "Name": "Phinma Petroleum and Geothermal, Inc."
+ },
+ {
+   "Symbol": "PRC",
+   "Name": "Philippine Racing Club, Inc."
+ },
+ {
+   "Symbol": "PRF2A",
+   "Name": "Petron Corp. - Perpetual Pref. Series 2A"
+ },
+ {
+   "Symbol": "PRF2B",
+   "Name": "Petron Corp. - Perpetual Pref. Series 2B"
+ },
+ {
+   "Symbol": "PRIM",
+   "Name": "Prime Media Holdings, Inc."
+ },
+ {
+   "Symbol": "PRMX",
+   "Name": "Primex Corporation"
+ },
+ {
+   "Symbol": "PSB",
+   "Name": "Philippine Savings Bank"
+ },
+ {
+   "Symbol": "PSE",
+   "Name": "The Philippine Stock Exchange, Inc"
+ },
+ {
+   "Symbol": "PTC",
+   "Name": "Philippine Trust Company"
+ },
+ {
+   "Symbol": "PX",
+   "Name": "Philex Mining Corporation"
+ },
+ {
+   "Symbol": "PXP",
+   "Name": "PXP Energy Corporation"
+ },
+ {
+   "Symbol": "RCB",
+   "Name": "Rizal Commercial Banking Corp."
+ },
+ {
+   "Symbol": "RCI",
+   "Name": "Roxas and Company, Inc."
+ },
+ {
+   "Symbol": "REG",
+   "Name": "Republic Glass Holdings Corp."
+ },
+ {
+   "Symbol": "RFM",
+   "Name": "RFM Corporation"
+ },
+ {
+   "Symbol": "RLC",
+   "Name": "Robinson Land Corporation"
+ },
+ {
+   "Symbol": "RLT",
+   "Name": "Philippine Realty and Holdings Corp."
+ },
+ {
+   "Symbol": "ROCK",
+   "Name": "Rockwell Land Corporation"
+ },
+ {
+   "Symbol": "ROX",
+   "Name": "Roxas Holdings, Inc."
+ },
+ {
+   "Symbol": "RRHI",
+   "Name": "Robinsons Retail Holdings, Inc."
+ },
+ {
+   "Symbol": "RWM",
+   "Name": "Travellers Int'l. Hotel Group, Inc."
+ },
+ {
+   "Symbol": "SBS",
+   "Name": "SBS Philippines Corporation"
+ },
+ {
+   "Symbol": "SCC",
+   "Name": "Semirara Mining and Power Corporation"
+ },
+ {
+   "Symbol": "SECB",
+   "Name": "Security Bank Corporation"
+ },
+ {
+   "Symbol": "SEVN",
+   "Name": "Philippine Seven Corporation"
+ },
+ {
+   "Symbol": "SFI",
+   "Name": "Swift Foods, Inc."
+ },
+ {
+   "Symbol": "SFIP",
+   "Name": "Swift Foods, Inc. Conv. Pref."
+ },
+ {
+   "Symbol": "SGI",
+   "Name": "Solid Group, Inc."
+ },
+ {
+   "Symbol": "SGP",
+   "Name": "Synergy Grid and Dev't Phils., Inc."
+ },
+ {
+   "Symbol": "SHLPH",
+   "Name": "Pilipinas Shell Petroleum Corporation"
+ },
+ {
+   "Symbol": "SHNG",
+   "Name": "Shang Properties, Inc."
+ },
+ {
+   "Symbol": "SLF",
+   "Name": "Sun Life Financial, Inc."
+ },
+ {
+   "Symbol": "SLI",
+   "Name": "Sta. Lucia Land, Inc."
+ },
+ {
+   "Symbol": "SM",
+   "Name": "SM Investments Corporation"
+ },
+ {
+   "Symbol": "SMC",
+   "Name": "San Miguel Corporation"
+ },
+ {
+   "Symbol": "SMC2A",
+   "Name": "San Miguel Corporation Series 2-A Pref."
+ },
+ {
+   "Symbol": "SMC2B",
+   "Name": "San Miguel Corporation Series 2-B Pref."
+ },
+ {
+   "Symbol": "SMC2C",
+   "Name": "San Miguel Corporation Series 2-C Pref."
+ },
+ {
+   "Symbol": "SMC2D",
+   "Name": "San Miguel Corporation Series 2-D Pref."
+ },
+ {
+   "Symbol": "SMC2E",
+   "Name": "San Miguel Corporation Series 2-E Pref."
+ },
+ {
+   "Symbol": "SMC2F",
+   "Name": "San Miguel Corporation Series 2-F Pref."
+ },
+ {
+   "Symbol": "SMC2G",
+   "Name": "San Miguel Corporation Series 2-G Pref."
+ },
+ {
+   "Symbol": "SMC2H",
+   "Name": "San Miguel Corporation Series 2-H Pref."
+ },
+ {
+   "Symbol": "SMC2I",
+   "Name": "San Miguel Corporation Series 2-I Pref."
+ },
+ {
+   "Symbol": "SMPH",
+   "Name": "SM Prime Holdings, Inc."
+ },
+ {
+   "Symbol": "SOC",
+   "Name": "SOCResources, Inc."
+ },
+ {
+   "Symbol": "SPC",
+   "Name": "SPC Power Corporation"
+ },
+ {
+   "Symbol": "SPM",
+   "Name": "Seafront Resources Corporation"
+ },
+ {
+   "Symbol": "SRDC",
+   "Name": "Supercity Realty Development Corporation"
+ },
+ {
+   "Symbol": "SSI",
+   "Name": "SSI Group, Inc."
+ },
+ {
+   "Symbol": "SSP",
+   "Name": "SFA Semicon Philippines Corporation"
+ },
+ {
+   "Symbol": "STI",
+   "Name": "STI Education Systems Holdings, Inc."
+ },
+ {
+   "Symbol": "STR",
+   "Name": "Starmalls, Inc."
+ },
+ {
+   "Symbol": "SUN",
+   "Name": "Suntrust Home Developers, Inc."
+ },
+ {
+   "Symbol": "T",
+   "Name": "TKC Metals Corporation"
+ },
+ {
+   "Symbol": "TBGI",
+   "Name": "Transpacific Broadband Group Int'l. Inc."
+ },
+ {
+   "Symbol": "TECH",
+   "Name": "Cirtek Holdings Philippines Corporation"
+ },
+ {
+   "Symbol": "TEL",
+   "Name": "PLDT, Inc."
+ },
+ {
+   "Symbol": "TFC",
+   "Name": "PTFC Redevelopment Corporation"
+ },
+ {
+   "Symbol": "TFHI",
+   "Name": "Top Frontier Investment Holdings, Inc."
+ },
+ {
+   "Symbol": "TUGS",
+   "Name": "Harbor Star Shipping Services, Inc."
+ },
+ {
+   "Symbol": "UBP",
+   "Name": "Union Bank of the Philippines"
+ },
+ {
+   "Symbol": "UNI",
+   "Name": "Unioil Resources and Holdings Co., Inc."
+ },
+ {
+   "Symbol": "UPM",
+   "Name": "United Paragon Mining Corporation"
+ },
+ {
+   "Symbol": "URC",
+   "Name": "Universal Robina Corporation"
+ },
+ {
+   "Symbol": "V",
+   "Name": "Vantage Equities, Inc."
+ },
+ {
+   "Symbol": "VITA",
+   "Name": "Vitarich Corporation"
+ },
+ {
+   "Symbol": "VLL",
+   "Name": "Vista Land and Lifescapes, Inc."
+ },
+ {
+   "Symbol": "VMC",
+   "Name": "Victorias Milling Company, Inc."
+ },
+ {
+   "Symbol": "VUL",
+   "Name": "Vulcan Industrial and Mining Corporation"
+ },
+ {
+   "Symbol": "VVT",
+   "Name": "Vivant Corporation"
+ },
+ {
+   "Symbol": "WEB",
+   "Name": "Philweb Corporation"
+ },
+ {
+   "Symbol": "WIN",
+   "Name": "Wellex Industries, Inc."
+ },
+ {
+   "Symbol": "WLCON",
+   "Name": "Wilcon Depot, Inc."
+ },
+ {
+   "Symbol": "WPI",
+   "Name": "Waterfront Philippines, Inc."
+ },
+ {
+   "Symbol": "X",
+   "Name": "Xurpas Inc."
+ },
+ {
+   "Symbol": "ZHI",
+   "Name": "Zeus Holdings, Inc."
+ }
+]
