@@ -10,6 +10,8 @@ using investingph.Helpers;
 using Xamarin.Forms;
 using investingph.Services;
 
+
+
 namespace investingph.Droid
 {
     [Activity(Label = "investingph", Icon = "@drawable/stocks", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

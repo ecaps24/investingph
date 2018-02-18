@@ -5,6 +5,10 @@ using investingph.Services;
 using investingph.Views;
 using Xamarin.Forms;
 
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 namespace investingph
 {
 	public partial class App : Application
@@ -52,6 +56,9 @@ namespace investingph
 
 		protected override void OnStart ()
 		{
+            AppCenter.Start("android=6da4f919-5508-4080-828d-02cbfd2e5c6c;" + 
+                "uwp={Your UWP App secret here};" + "ios={Your iOS App secret here}", 
+                typeof(Analytics), typeof(Crashes));
             InitializeService initialize = new InitializeService();
             initialize.Initialize();
 		}
