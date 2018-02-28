@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using investingph.ViewModels;
+using investingph.Views;
 
 namespace investingph.ViewModels
 {
@@ -26,10 +28,35 @@ namespace investingph.ViewModels
                 return _searchCommand;
             }
         }
+
+        private Command<ToolbarItem> sortCommand;
+
+        public Command<ToolbarItem> SortCommand
+        {
+            get { return sortCommand; }
+            set { sortCommand = value; }
+        }
+
+
         public RootViewModel()
         {
             _searchCommand = new Command<string>(ExecuteSearchCommand);
             addCommand = new Command<string>(ExecuteAddCommand);
+            sortCommand = new Command<ToolbarItem>(ExecuteSortCommand);
+        }
+
+        private async void ExecuteSortCommand(ToolbarItem item)
+        {
+
+            string sort = await Application.Current.MainPage.DisplayActionSheet(
+                "", "",
+                null, "Active", "Gainers", "Losers", "Volume");
+            if (sort == "") return;
+
+          //  StockListViewModel svm = new StockListViewModel();
+            StockListPage slp = new StockListPage();
+            await slp.RefreshItemSource(sort);
+
         }
 
         private async void ExecuteSearchCommand(string param = "")
@@ -45,7 +72,7 @@ namespace investingph.ViewModels
             Application.Current.MainPage.ToolbarItems
                 .Remove(toolBar);
 
-            
+
         }
 
         public void AddToolBar(ToolbarItem toolBar)
@@ -67,19 +94,19 @@ namespace investingph.ViewModels
                 case "Add Portfolio":
                     bvm.Title = "Add Portfolio";
                     await App.Locator.NavigationService.NavigateTo(
-                        Locator.SearchPage,bvm);
+                        Locator.SearchPage, bvm);
                     break;
                 case "Add WatchList":
                     bvm.Title = "Add WatchList";
 
                     await App.Locator.NavigationService.NavigateTo(
-                        Locator.SearchPage,bvm);
+                        Locator.SearchPage, bvm);
                     break;
                 default:
                     break;
 
             }
         }
-        
+
     }
 }

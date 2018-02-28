@@ -1,0 +1,16 @@
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\investingph.UnitTest.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Java.Interop.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Microsoft.AppCenter.Analytics.Android.Bindings.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Microsoft.AppCenter.Analytics.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Microsoft.AppCenter.Android.Bindings.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Microsoft.AppCenter.Crashes.Android.Bindings.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Microsoft.AppCenter.Crashes.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Microsoft.AppCenter.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Mono.Android.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\mscorlib.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\System.Core.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\System.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\System.Xml.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Xamarin.Android.NUnitLite.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\System.Runtime.Serialization.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Release\android\assets\Mono.Security.dll

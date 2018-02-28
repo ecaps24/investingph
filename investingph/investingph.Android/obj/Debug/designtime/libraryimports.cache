@@ -23,6 +23,9 @@
     <ManifestDocument>obj\Debug\lp\43\jl\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\lp\43\jl\manifest\AndroidManifest.xml</ManifestDocument>
     <ManifestDocument>obj\Debug\lp\44\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\lp\76\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\lp\78\jl\AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj\Debug\lp\79\jl\AndroidManifest.xml</ManifestDocument>
   </ManifestDocuments>
   <NativeLibraries />
   <Jars>
@@ -43,5 +46,8 @@
     <Jar>obj\Debug\lp\42\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\lp\43\jl\bin\classes.jar</Jar>
     <Jar>obj\Debug\lp\44\jl\bin\classes.jar</Jar>
+    <Jar>obj\Debug\lp\76\jl\bin\classes.jar</Jar>
+    <Jar>obj\Debug\lp\78\jl\bin\classes.jar</Jar>
+    <Jar>obj\Debug\lp\79\jl\bin\classes.jar</Jar>
   </Jars>
 </Paths>

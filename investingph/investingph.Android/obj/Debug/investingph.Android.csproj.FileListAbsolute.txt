@@ -1,10 +1,10 @@
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\investingph.Android.csprojResolveAssemblyReference.cache
 C:\XFDev\investingph\investingph\investingph.Android\bin\Debug\investingph.Android.dll
 C:\XFDev\investingph\investingph\investingph.Android\bin\Debug\investingph.Android.pdb
 C:\XFDev\investingph\investingph\investingph.Android\bin\Debug\com.companyname.investingph.apk
 C:\XFDev\investingph\investingph\investingph.Android\bin\Debug\com.companyname.investingph-Signed.apk
 C:\XFDev\investingph\investingph\investingph.Android\bin\Debug\investingph.dll
 C:\XFDev\investingph\investingph\investingph.Android\bin\Debug\investingph.pdb
-C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\investingph.Android.csprojResolveAssemblyReference.cache
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\investingph.Android.csproj.CoreCompileInputs.cache
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\investingph.Android.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\investingph.Android.pdb
@@ -127,6 +127,10 @@ C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Pl
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Xamarin.Forms.Core.dll.mdb
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\res\drawable\sorter.png
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\res\drawable-hdpi\sorter.png
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\res\drawable-xhdpi\sorter.png
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\res\drawable-xxhdpi\sorter.png
 C:\XFDev\investingph\investingph\investingph.Android\bin\Debug\investingph.Android.dll
 bin\Debug\FormsPlugin.Iconize.dll.mdb
 bin\Debug\FormsPlugin.Iconize.Droid.dll.mdb

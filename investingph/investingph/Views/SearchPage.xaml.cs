@@ -58,7 +58,8 @@ namespace investingph.Views
 
                 //companies = new ObservableCollection<Company>
                 //  ((SuggestionsListView.ItemsSource).ToList();
-                var a = SuggestionsListView.ItemsSource as ObservableCollection<Company>;
+                var a = SuggestionsListView.ItemsSource 
+                    as ObservableCollection<Company>;
                 
                 
                 SuggestionsListView.ItemsSource =

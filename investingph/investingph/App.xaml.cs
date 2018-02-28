@@ -56,9 +56,9 @@ namespace investingph
 
 		protected override void OnStart ()
 		{
-            AppCenter.Start("android=6da4f919-5508-4080-828d-02cbfd2e5c6c;" + 
-                "uwp={Your UWP App secret here};" + "ios={Your iOS App secret here}", 
-                typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("android=bb9e2d82-02ca-42f5-9a2c-7e5ba85f585e;" + 
+                "uwp={Your UWP App secret here};" +
+                "ios={Your iOS App secret here}", typeof(Analytics), typeof(Crashes));
             InitializeService initialize = new InitializeService();
             initialize.Initialize();
 		}

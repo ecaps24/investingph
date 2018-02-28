@@ -74,3 +74,9 @@ System.Text.Encoding
 System.Reflection.Primitives
 System.Text.Encoding.Extensions
 System.Diagnostics.Tools
+Microsoft.AppCenter.Analytics.Android.Bindings
+Microsoft.AppCenter.Analytics
+Microsoft.AppCenter.Android.Bindings
+Microsoft.AppCenter.Crashes.Android.Bindings
+Microsoft.AppCenter.Crashes
+Microsoft.AppCenter

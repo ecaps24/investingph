@@ -130,6 +130,8 @@ namespace investingph.Services
                 stockList = await GetLocalList();
             }
             stockList = stockList.ToList();
+            Debug.WriteLine($"Refreshed:  { parameters}");
+
             if (parameters == "Volume")
             {
                 return stockList.OrderByDescending(s => s.Volume).ToList();
@@ -143,6 +145,8 @@ namespace investingph.Services
                 return stockList.OrderByDescending(s => s.TradedValue).ToList();
 
             }
+
+
         }
 
         public async Task<Stock> Stock(string symbol)

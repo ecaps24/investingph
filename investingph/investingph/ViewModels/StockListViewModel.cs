@@ -30,7 +30,7 @@ namespace investingph.ViewModels
             set
             {
                 stockList = value;
-                OnPropertyChanged();
+                OnPropertyChanged("StockList");
             }
         }
 

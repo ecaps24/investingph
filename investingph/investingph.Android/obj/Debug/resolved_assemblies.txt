@@ -10,6 +10,12 @@ C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Ga
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\HtmlAgilityPack.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\investingph.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Java.Interop.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Microsoft.AppCenter.Analytics.Android.Bindings.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Microsoft.AppCenter.Analytics.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Microsoft.AppCenter.Android.Bindings.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Microsoft.AppCenter.Crashes.Android.Bindings.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Microsoft.AppCenter.Crashes.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Microsoft.AppCenter.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Microsoft.CSharp.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Mono.Android.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\android\assets\Mono.Android.Export.dll

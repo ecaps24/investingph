@@ -3,15 +3,10 @@
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="15" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-  <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-  <uses-permission android:name="android.permission.VIBRATE" />
-  <uses-permission android:name="android.permission.WAKE_LOCK" />
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-  <application android:label="investingph" android:icon="@drawable/inv" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+  <application android:label="investingph" android:icon="@drawable/stocks" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
     <receiver android:name="md5d67142b47b29ff0e9f54fb1877d2b18d.AlarmReceiver">
       <intent-filter android:priority="-1000">
         <action android:name="android.intent.action.BOOT_COMPLETED" />

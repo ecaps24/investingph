@@ -1,6 +1,3 @@
-C:\XFDev\investingph\investingph\investingph\bin\Debug\netstandard2.0\investingph.deps.json
-C:\XFDev\investingph\investingph\investingph\bin\Debug\netstandard2.0\investingph.dll
-C:\XFDev\investingph\investingph\investingph\bin\Debug\netstandard2.0\investingph.pdb
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.csprojResolveAssemblyReference.cache
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.csproj.CoreCompileInputs.cache
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.App.xaml.g.cs
@@ -18,5 +15,8 @@ C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingp
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.Views.WatchListPage.xaml.g.cs
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.AssemblyInfoInputs.cache
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.AssemblyInfo.cs
+C:\XFDev\investingph\investingph\investingph\bin\Debug\netstandard2.0\investingph.deps.json
+C:\XFDev\investingph\investingph\investingph\bin\Debug\netstandard2.0\investingph.dll
+C:\XFDev\investingph\investingph\investingph\bin\Debug\netstandard2.0\investingph.pdb
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.dll
 C:\XFDev\investingph\investingph\investingph\obj\Debug\netstandard2.0\investingph.pdb

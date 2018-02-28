@@ -18,9 +18,18 @@
     <Jar>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\42\jl\bin\classes.jar</Jar>
     <Jar>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\43\jl\bin\classes.jar</Jar>
     <Jar>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\44\jl\bin\classes.jar</Jar>
+    <Jar>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\76\jl\bin\classes.jar</Jar>
+    <Jar>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\78\jl\bin\classes.jar</Jar>
+    <Jar>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\79\jl\bin\classes.jar</Jar>
   </Jars>
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\3\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\76\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\77\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\78\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\79\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\80\jl\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\81\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\12\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\16\jl\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\18\jl\res</ResolvedResourceDirectory>
@@ -42,6 +51,12 @@
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj\Debug\lp\3\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\76\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\77\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\78\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\79\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\80\jl\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\lp\81\jl\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\lp\12\jl\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\lp\16\jl\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\lp\18\jl\assets</ResolvedAssetDirectory>
@@ -58,6 +73,12 @@
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\3.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\76.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\77.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\78.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\79.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\80.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\81.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\12.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\16.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\XFDev\investingph\investingph\investingph.Android\obj\Debug\lp\18.stamp</ResolvedResourceDirectoryStamp>

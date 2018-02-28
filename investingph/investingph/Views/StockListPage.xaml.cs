@@ -5,6 +5,7 @@ using investingph.Services;
 using investingph.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,6 +98,29 @@ namespace investingph.Views
             }
             lstView.EndRefresh();
             
+        }
+
+
+        public async Task RefreshItemSource(string param = "")
+        {
+            StockListViewModel svm = BindingContext as StockListViewModel;
+
+
+            StockServices services = new StockServices();
+
+            //ObservableCollection<Stock> stocks = new ObservableCollection<Stock>();
+            //stocks = new ObservableCollection<Stock>(
+            //    await services.GetStockList(param));
+            svm.RefreshListView(param);
+            if ((svm != null) && (svm.RefreshCommand.CanExecute(param)))
+            {
+                svm.RefreshCommand.Execute(param);
+            }
+
+            //lstView.BeginRefresh();
+            //lstView.ItemsSource = stocks;
+            //lstView.EndRefresh();
+
         }
 
         async void Gainers_ButtonClicked(object sender, EventArgs e)
