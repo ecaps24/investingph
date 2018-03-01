@@ -8,6 +8,12 @@ GalaSoft.MvvmLight.Extras
 GalaSoft.MvvmLight.Platform
 HtmlAgilityPack
 investingph
+Microsoft.AppCenter.Analytics.Android.Bindings
+Microsoft.AppCenter.Analytics
+Microsoft.AppCenter.Android.Bindings
+Microsoft.AppCenter.Crashes.Android.Bindings
+Microsoft.AppCenter.Crashes
+Microsoft.AppCenter
 Newtonsoft.Json
 PCLStorage.Abstractions
 PCLStorage
@@ -74,9 +80,3 @@ System.Text.Encoding
 System.Reflection.Primitives
 System.Text.Encoding.Extensions
 System.Diagnostics.Tools
-Microsoft.AppCenter.Analytics.Android.Bindings
-Microsoft.AppCenter.Analytics
-Microsoft.AppCenter.Android.Bindings
-Microsoft.AppCenter.Crashes.Android.Bindings
-Microsoft.AppCenter.Crashes
-Microsoft.AppCenter

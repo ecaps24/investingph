@@ -2848,13 +2848,13 @@ containing a value of this type.
         public static int asortgainers=0x7f020057;
         public static int asortvolume=0x7f020058;
         public static int avd_hide_password=0x7f020059;
-        public static int avd_hide_password_1=0x7f02012a;
-        public static int avd_hide_password_2=0x7f02012b;
-        public static int avd_hide_password_3=0x7f02012c;
+        public static int avd_hide_password_1=0x7f02012b;
+        public static int avd_hide_password_2=0x7f02012c;
+        public static int avd_hide_password_3=0x7f02012d;
         public static int avd_show_password=0x7f02005a;
-        public static int avd_show_password_1=0x7f02012d;
-        public static int avd_show_password_2=0x7f02012e;
-        public static int avd_show_password_3=0x7f02012f;
+        public static int avd_show_password_1=0x7f02012e;
+        public static int avd_show_password_2=0x7f02012f;
+        public static int avd_show_password_3=0x7f020130;
         public static int back=0x7f02005b;
         public static int bitcoin=0x7f02005c;
         public static int calendar_bg_selector=0x7f02005d;
@@ -3044,8 +3044,8 @@ containing a value of this type.
         public static int notification_bg_normal=0x7f020115;
         public static int notification_bg_normal_pressed=0x7f020116;
         public static int notification_icon_background=0x7f020117;
-        public static int notification_template_icon_bg=0x7f020128;
-        public static int notification_template_icon_low_bg=0x7f020129;
+        public static int notification_template_icon_bg=0x7f020129;
+        public static int notification_template_icon_low_bg=0x7f02012a;
         public static int notification_tile_bg=0x7f020118;
         public static int notify_panel_notification_icon_bg=0x7f020119;
         public static int pheconomy=0x7f02011a;
@@ -3058,10 +3058,11 @@ containing a value of this type.
         public static int sort=0x7f020121;
         public static int sort2=0x7f020122;
         public static int sortactive=0x7f020123;
-        public static int sortgainers=0x7f020124;
-        public static int sortvolume=0x7f020125;
-        public static int stock=0x7f020126;
-        public static int stocks=0x7f020127;
+        public static int sorter=0x7f020124;
+        public static int sortgainers=0x7f020125;
+        public static int sortvolume=0x7f020126;
+        public static int stock=0x7f020127;
+        public static int stocks=0x7f020128;
     }
     public static final class id {
         public static int action0=0x7f0b00a2;
