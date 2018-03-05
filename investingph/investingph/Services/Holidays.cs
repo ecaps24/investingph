@@ -15,6 +15,7 @@ namespace investingph.Services
                 string year = DateTime.Now.Year.ToString();
                 List<DateTime> holidays = new List<DateTime>
                 {
+                   
 
                         DateTime.Parse("01/01/" + year),
                         DateTime.Parse("02/16/" + year),

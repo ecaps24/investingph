@@ -9,12 +9,14 @@
   <ItemGroup>
     <None Remove="Data\Company.csv" />
     <None Remove="Files\Company.txt" />
+    <None Remove="Files\Holidays.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Data\Company.csv" />
     <EmbeddedResource Include="Files\1Company.txt" />
     <EmbeddedResource Include="Files\Company.txt" />
+    <EmbeddedResource Include="Files\Holidays.txt" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,65 @@
+﻿[
+{
+	"HolidayDate": "01/01/2018"
+},
+{
+	"HolidayDate": "02/16/2018"
+},
+{
+	"HolidayDate": "01/01/2018"
+},
+{
+	"HolidayDate": "02/25/2018"
+},
+{
+	"HolidayDate": "03/29/2018"
+},
+{
+	"HolidayDate": "03/30/2018"
+},
+{
+	"HolidayDate": "03/31/2018"
+},
+{
+	"HolidayDate": "04/09/2018"
+},
+{
+	"HolidayDate": "05/01/2018"
+},
+
+{
+	"HolidayDate": "06/12/018"
+},
+{
+	"HolidayDate": "06/15/2018"
+},
+
+{
+	"HolidayDate": "08/21/2018"
+},
+{
+	"HolidayDate": "08/27/2018"
+},
+{
+	"HolidayDate": "11/01/2018"
+},
+{
+	"HolidayDate": "11/02/2018"
+},
+{
+	"HolidayDate": "11/30/2018"
+},
+{
+	"HolidayDate": "12/24/2018"
+},
+{
+	"HolidayDate": "12/25/2018"
+},
+
+{
+	"HolidayDate": "12/30/2018"
+},
+{
+	"HolidayDate": "12/31/2018"
+}
+]

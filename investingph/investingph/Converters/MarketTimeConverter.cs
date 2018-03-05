@@ -2,6 +2,9 @@
 using investingph.Services;
 using System.Collections.Generic;
 using System.Text;
+using investingph.Models;
+using investingph.Data;
+using System.Threading.Tasks;
 
 namespace investingph.Converters
 {
@@ -54,11 +57,12 @@ namespace investingph.Converters
             }
         }
 
-        public bool IsBusinessDay()
+        public async Task<bool> IsBusinessDay()
         {
-            Holidays holidays = new Holidays();
-            var exists = holidays.Dates.Exists(h => h.Date == ManilaDay);
-
+            //  Holiday holidays = new Holiday();
+            // var exists = holidays(h => h.Date == ManilaDay);
+            HolidayData hData = new HolidayData();
+            var exists = await hData.IsHoliday(ManilaDay);
             if (ManilaTime.DayOfWeek != DayOfWeek.Saturday && ManilaTime.DayOfWeek != DayOfWeek.Sunday && !exists)
             {
                 return true;
@@ -71,12 +75,11 @@ namespace investingph.Converters
 
         }
 
-        public Boolean MarketActive
+        public async Task<bool> MarketActive()
         {
-            get
-            {
                 var open = ManilaTime >= MarketOpen && ManilaTime < MarketClose.AddMinutes(10);
-                if (IsBusinessDay() && open)
+                 
+                if (await IsBusinessDay() && open)
                 {
                     return true;
                 }
@@ -84,7 +87,6 @@ namespace investingph.Converters
                 {
                     return false;
                 }
-            }
         }
 
         

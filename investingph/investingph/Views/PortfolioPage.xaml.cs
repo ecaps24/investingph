@@ -57,10 +57,11 @@ namespace investingph.Views
 
         }
 
-        private void RefreshListAsync()
+        private async void RefreshListAsync()
         {
             MarketTimeConverter market = new MarketTimeConverter();
-            if (!market.MarketActive || IsBusy) return;
+            var active = await market.MarketActive();
+            if (!active || IsBusy) return;
 
             try
             {

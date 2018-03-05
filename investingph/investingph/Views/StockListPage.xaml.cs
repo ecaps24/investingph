@@ -80,11 +80,16 @@ namespace investingph.Views
             await lblStatus.ScaleTo(0.8, 100, Easing.SpringIn);
         }
 
-        public void RefreshListAsync()
+        public void RefreshList()
+        {
+            RefreshListAsync();
+        }
+
+        public async void RefreshListAsync()
         {
             MarketTimeConverter market = new MarketTimeConverter();
-           
-            if (!market.MarketActive || IsBusy) return;
+            var active =await market.MarketActive();
+            if (!active || IsBusy) return;
             {
                 try
                 {

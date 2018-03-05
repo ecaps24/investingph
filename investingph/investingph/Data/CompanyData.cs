@@ -32,17 +32,7 @@ namespace investingph.Data
                     .DeserializeObject<List<Company>>(text);
                 //List<Company> company = new List<Company>(result);
                 companyList = new List<Company>(company);
-                //while (!reader.EndOfStream)
-                //{
-                //    var line = reader.ReadLineAsync();
-                //    var values = line.Split('|');
-                //    companyList.Add(new Company
-                //    {
-                //        Symbol = values[0],
-                //        CompanyName = values[1]
-                //    });
 
-                //}
             }
    
            

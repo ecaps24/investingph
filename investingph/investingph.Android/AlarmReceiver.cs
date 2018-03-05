@@ -21,6 +21,7 @@ namespace investingph.Droid
         Priority = (int)IntentFilterPriority.LowPriority)]
     public class AlarmReceiver : BroadcastReceiver
     {
+        public bool MarketActive { get; set; }
         public override void OnReceive(Context context, Intent intent)
         {
             int counter = 0;
@@ -56,7 +57,9 @@ namespace investingph.Droid
 
             var notification = builder.Build();
 
-            if (!marketTime.MarketActive) return;
+            CheckMarketActive();
+
+            if (!MarketActive) return;
 
             var open = title.Contains("Open");
             var close = title.Contains("Close");
@@ -79,6 +82,12 @@ namespace investingph.Droid
 
             manager.Notify(++counter, notification);
 
+        }
+
+        public async void CheckMarketActive()
+        {
+            MarketTimeConverter market = new MarketTimeConverter();
+            MarketActive = await market.MarketActive();
         }
     }
 }

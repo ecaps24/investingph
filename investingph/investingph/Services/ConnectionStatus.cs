@@ -1,7 +1,11 @@
 ﻿using investingph.Converters;
+using investingph.Data;
+using investingph.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace investingph.Services
 {
@@ -13,13 +17,19 @@ namespace investingph.Services
         {
             get
             {
-                return CheckTime() == "Open" ? true : false;
+
+                return CheckTime()==MarketStatus() ? true : false;
 
             }
             set { marketOpen = value; }
         }
 
-        private string CheckTime()
+        private async Task<string> MarketStatus()
+        {
+            return "Open";
+        }
+
+        private async Task<string> CheckTime()
         {
             var val = "Close";
             var manila = 800;
@@ -33,11 +43,14 @@ namespace investingph.Services
             var myTz = TimeZoneInfo.Utc;
             var a = TimeZoneInfo.ConvertTime(myTime, myTz);
 
-            Holidays holidays = new Holidays();
+            //Holidays holidays = new Holidays();
+            HolidayData hData = new HolidayData();
+            List<Holiday> holidays = new List<Holiday>();
+            holidays = new List<Holiday>(
+                await hData.GetHolidays());
             DateTime date = DateTime.UtcNow.AddHours(8);
-            var exists = holidays.Dates.Exists(h => h.Date == date);
-
-
+            var exists =await hData.IsHoliday(date);
+            //var exists = holidays.Dates.Exists(h => h.Date == date);
 
             var hourMinute = Convert.ToDouble(myTime.ToString("HHmm"));
             var myDay = myTime.DayOfWeek;
