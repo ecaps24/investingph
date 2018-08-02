@@ -5,7 +5,7 @@
   <xs:import schemaLocation="schemas.android.com.tools.xsd" namespace="http://schemas.android.com/tools" />
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>31/01/2018 11:56:12 AM</xs:documentation>
+    <xs:documentation>26/03/2018 5:09:59 PM</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -82,7 +82,6 @@
       <xs:element ref="RadioGroup" />
       <xs:element ref="TextSwitcher" />
       <xs:element ref="fragment" />
-      <xs:element ref="com.xamarin.forms.platform.android.FormsViewGroup" />
       <xs:element ref="FormsPlugin.Iconize.Droid.IconTabbedPageRenderer" />
       <xs:element ref="FormsPlugin.Iconize.Droid.IconNavigationRenderer" />
       <xs:element ref="FormsPlugin.Iconize.Droid.IconLabelRenderer" />
@@ -91,6 +90,41 @@
       <xs:element ref="Plugin.Iconize.Droid.Controls.IconButton" />
       <xs:element ref="Plugin.Iconize.Droid.Controls.IconTextView" />
       <xs:element ref="Plugin.Iconize.Droid.Controls.IconToggleButton" />
+      <xs:element ref="com.xamarin.forms.platform.android.FormsViewGroup" />
+      <xs:element ref="XLabs.Forms.Pages.ExtendedMasterDetailRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView" />
+      <xs:element ref="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView" />
+      <xs:element ref="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView" />
+      <xs:element ref="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView" />
+      <xs:element ref="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView" />
+      <xs:element ref="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView" />
+      <xs:element ref="XLabs.Forms.Controls.WebImageRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.SeparatorRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.SeparatorDroidView" />
+      <xs:element ref="XLabs.Forms.Controls.SensorBarViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.SensorBarDroidView" />
+      <xs:element ref="XLabs.Forms.Controls.RadioButtonRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ImageGalleryRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.IconLabelRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.IconButtonRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ImageButtonRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.HyperLinkLabelRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.HybridWebViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.GridViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.GesturesContentViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ExtendedTableViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ExtendedSwitchRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ExtendedScrollViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ExtendedLabelRender" />
+      <xs:element ref="XLabs.Forms.Controls.ExtendedEntryRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ExtendedEditorRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.ExtendedButtonRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.DragContentViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.CircleImageRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.CheckBoxRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.CameraPreview" />
+      <xs:element ref="XLabs.Forms.Controls.CameraViewRenderer" />
+      <xs:element ref="XLabs.Forms.Controls.CalendarViewRenderer" />
       <xs:element ref="android.support.design.widget.TextInputEditText" />
       <xs:element ref="android.support.design.widget.TabItem" />
       <xs:element ref="android.support.design.widget.NavigationView" />
@@ -1454,16 +1488,6 @@
     <xs:attribute ref="android:layout_height" />
     <xs:attribute ref="android:style" />
   </xs:complexType>
-  <xs:element name="com.xamarin.forms.platform.android.FormsViewGroup" type="com.xamarin.forms.platform.android.FormsViewGroup">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Xamarin.Forms.Platform.Android.FormsViewGroup</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="com.xamarin.forms.platform.android.FormsViewGroup">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="FormsPlugin.Iconize.Droid.IconTabbedPageRenderer" type="FormsPlugin.Iconize.Droid.IconTabbedPageRenderer">
     <xs:annotation>
       <xs:documentation>Runtime Type: FormsPlugin.Iconize.Droid.IconTabbedPageRenderer</xs:documentation>
@@ -1542,6 +1566,356 @@
   <xs:complexType name="Plugin.Iconize.Droid.Controls.IconToggleButton">
     <xs:complexContent mixed="false">
       <xs:extension base="ToggleButton" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.xamarin.forms.platform.android.FormsViewGroup" type="com.xamarin.forms.platform.android.FormsViewGroup">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Xamarin.Forms.Platform.Android.FormsViewGroup</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.xamarin.forms.platform.android.FormsViewGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Pages.ExtendedMasterDetailRenderer" type="XLabs.Forms.Pages.ExtendedMasterDetailRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Pages.ExtendedMasterDetailRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Pages.ExtendedMasterDetailRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView" type="XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.MonoDroid.TimesSquare.MonthView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="LinearLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView" type="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarRowView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView" type="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarPickerView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView" type="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarGridView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView" type="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarCellView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TextView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView" type="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.MonoDroid.TimesSquare.CalendarArrowView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Button" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.WebImageRenderer" type="XLabs.Forms.Controls.WebImageRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.WebImageRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.WebImageRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.SeparatorRenderer" type="XLabs.Forms.Controls.SeparatorRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.SeparatorRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.SeparatorRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.SeparatorDroidView" type="XLabs.Forms.Controls.SeparatorDroidView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.SeparatorDroidView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.SeparatorDroidView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.SensorBarViewRenderer" type="XLabs.Forms.Controls.SensorBarViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.SensorBarViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.SensorBarViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.SensorBarDroidView" type="XLabs.Forms.Controls.SensorBarDroidView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.SensorBarDroidView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.SensorBarDroidView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="View" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.RadioButtonRenderer" type="XLabs.Forms.Controls.RadioButtonRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.RadioButtonRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.RadioButtonRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ImageGalleryRenderer" type="XLabs.Forms.Controls.ImageGalleryRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ImageGalleryRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ImageGalleryRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.IconLabelRenderer" type="XLabs.Forms.Controls.IconLabelRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.IconLabelRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.IconLabelRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.IconButtonRenderer" type="XLabs.Forms.Controls.IconButtonRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.IconButtonRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.IconButtonRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ImageButtonRenderer" type="XLabs.Forms.Controls.ImageButtonRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ImageButtonRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ImageButtonRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.HyperLinkLabelRenderer" type="XLabs.Forms.Controls.HyperLinkLabelRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.HyperLinkLabelRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.HyperLinkLabelRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.HybridWebViewRenderer" type="XLabs.Forms.Controls.HybridWebViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.HybridWebViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.HybridWebViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.GridViewRenderer" type="XLabs.Forms.Controls.GridViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.GridViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.GridViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.GesturesContentViewRenderer" type="XLabs.Forms.Controls.GesturesContentViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.GesturesContentViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.GesturesContentViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ExtendedTableViewRenderer" type="XLabs.Forms.Controls.ExtendedTableViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ExtendedTableViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ExtendedTableViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ExtendedSwitchRenderer" type="XLabs.Forms.Controls.ExtendedSwitchRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ExtendedSwitchRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ExtendedSwitchRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ExtendedScrollViewRenderer" type="XLabs.Forms.Controls.ExtendedScrollViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ExtendedScrollViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ExtendedScrollViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ScrollView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ExtendedLabelRender" type="XLabs.Forms.Controls.ExtendedLabelRender">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ExtendedLabelRender</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ExtendedLabelRender">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ExtendedEntryRenderer" type="XLabs.Forms.Controls.ExtendedEntryRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ExtendedEntryRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ExtendedEntryRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ExtendedEditorRenderer" type="XLabs.Forms.Controls.ExtendedEditorRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ExtendedEditorRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ExtendedEditorRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.ExtendedButtonRenderer" type="XLabs.Forms.Controls.ExtendedButtonRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.ExtendedButtonRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.ExtendedButtonRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.DragContentViewRenderer" type="XLabs.Forms.Controls.DragContentViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.DragContentViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.DragContentViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.CircleImageRenderer" type="XLabs.Forms.Controls.CircleImageRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.CircleImageRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.CircleImageRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.CheckBoxRenderer" type="XLabs.Forms.Controls.CheckBoxRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.CheckBoxRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.CheckBoxRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.CameraPreview" type="XLabs.Forms.Controls.CameraPreview">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.CameraPreview</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.CameraPreview">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.CameraViewRenderer" type="XLabs.Forms.Controls.CameraViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.CameraViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.CameraViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="XLabs.Forms.Controls.CalendarViewRenderer" type="XLabs.Forms.Controls.CalendarViewRenderer">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: XLabs.Forms.Controls.CalendarViewRenderer</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="XLabs.Forms.Controls.CalendarViewRenderer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="android.support.design.widget.TextInputEditText" type="android.support.design.widget.TextInputEditText">

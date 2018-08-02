@@ -14,7 +14,7 @@ public class Channel_ListenerImplementor
 			"n_onEnqueuingLog:(Lcom/microsoft/appcenter/ingestion/models/Log;Ljava/lang/String;)V:GetOnEnqueuingLog_Lcom_microsoft_appcenter_ingestion_models_Log_Ljava_lang_String_Handler:Com.Microsoft.Appcenter.Channel.IChannelListenerInvoker, Microsoft.AppCenter.Android.Bindings\n" +
 			"n_shouldFilter:(Lcom/microsoft/appcenter/ingestion/models/Log;)Z:GetShouldFilter_Lcom_microsoft_appcenter_ingestion_models_Log_Handler:Com.Microsoft.Appcenter.Channel.IChannelListenerInvoker, Microsoft.AppCenter.Android.Bindings\n" +
 			"";
-		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Channel.IChannelListenerImplementor, Microsoft.AppCenter.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", Channel_ListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Channel.IChannelListenerImplementor, Microsoft.AppCenter.Android.Bindings", Channel_ListenerImplementor.class, __md_methods);
 	}
 
 
@@ -22,7 +22,7 @@ public class Channel_ListenerImplementor
 	{
 		super ();
 		if (getClass () == Channel_ListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Channel.IChannelListenerImplementor, Microsoft.AppCenter.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Channel.IChannelListenerImplementor, Microsoft.AppCenter.Android.Bindings", "", this, new java.lang.Object[] {  });
 	}
 
 

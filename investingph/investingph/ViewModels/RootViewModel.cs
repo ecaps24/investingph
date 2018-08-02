@@ -52,7 +52,7 @@ namespace investingph.ViewModels
                 "", "",
                 null, "Active", "Gainers", "Losers", "Volume");
             if (sort == "") return;
-
+            
           //  StockListViewModel svm = new StockListViewModel();
             StockListPage slp = new StockListPage();
             await slp.RefreshItemSource(sort);

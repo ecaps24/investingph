@@ -10,14 +10,19 @@ C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\Mono.Android.
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\mscorlib.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Core.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.dll
-C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Runtime.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Xml.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\Xamarin.Android.NUnitLite.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Runtime.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.ComponentModel.Composition.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Threading.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Collections.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Collections.Concurrent.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Reflection.dll
-C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Diagnostics.Debug.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Linq.Expressions.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Reflection.Primitives.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Dynamic.Runtime.dll
+C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.ObjectModel.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Linq.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Runtime.Extensions.dll
@@ -26,4 +31,3 @@ C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Net.Ht
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.Runtime.Serialization.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.ServiceModel.Internals.dll
 C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\Mono.Security.dll
-C:\XFDev\investingph\investingph.UnitTest\obj\Debug\android\assets\System.ComponentModel.Composition.dll

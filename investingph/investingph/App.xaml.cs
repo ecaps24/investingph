@@ -1,6 +1,4 @@
-﻿
-
-using investingph.Data;
+﻿using investingph.Data;
 using investingph.Services;
 using investingph.Views;
 using Xamarin.Forms;

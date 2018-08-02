@@ -38,6 +38,7 @@ C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\SuaveControls.FloatingActionButton.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\SuaveControls.FloatingActionButton.Droid.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\System.Core.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\System.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\System.Net.Http.dll
@@ -71,6 +72,6 @@ C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\XLabs.Platform.Droid.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\XLabs.Serialization.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\System.Numerics.dll
-C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\Mono.Security.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\System.Runtime.Serialization.dll
 C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\System.ServiceModel.Internals.dll
+C:\XFDev\investingph\investingph\investingph.Android\obj\Release\android\assets\Mono.Security.dll

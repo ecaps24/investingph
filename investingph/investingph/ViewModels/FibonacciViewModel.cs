@@ -333,7 +333,7 @@ namespace investingph.ViewModels
 
         public FibonacciViewModel()
         {
-            Title = "Fibonacci Calculator";
+            Title = "Fibonacci";
             _deductValueCommand = new Command<Entry>(DeductValue);
             _addValueCommand = new Command<Entry>(AddValue);
 

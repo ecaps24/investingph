@@ -23,6 +23,10 @@ namespace investingph.Views
 			InitializeComponent ();
 
             Title = bvm.Title;
+            if (bvm.Title=="Add Portfolio" || bvm.Title=="Add WatchList")
+            {
+                BackIcon.IsVisible = false;
+            }
         }
 
         protected override void OnAppearing()

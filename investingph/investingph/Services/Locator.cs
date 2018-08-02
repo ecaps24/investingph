@@ -23,6 +23,7 @@ namespace investingph.Services
         public const string SearchPage = "SearchPage";
         public const string PortfolioAddEditPage = "PortfolioAddEditPage";
         public const string FibonacciPage = "FibonacciPage";
+        public const string CalculatorPage = "CalculatorPage";
 
 
 
@@ -43,6 +44,7 @@ namespace investingph.Services
             navigation.Configure(SearchPage, typeof(SearchPage));
             navigation.Configure(PortfolioAddEditPage, typeof(PortfolioAddEditPage));
             navigation.Configure(FibonacciPage, typeof(FibonacciPage));
+            navigation.Configure(CalculatorPage, typeof(CalculatorPage));
 
 
             navigation.Configure(TABPage, typeof(HomePage));
@@ -57,6 +59,7 @@ namespace investingph.Services
             SimpleIoc.Default.Register<SearchViewModel>();
             SimpleIoc.Default.Register<PortfolioAddEditViewModel>();
             SimpleIoc.Default.Register<FibonacciViewModel>();
+            SimpleIoc.Default.Register<CalculatorViewModel>();
 
 
 
@@ -203,6 +206,23 @@ namespace investingph.Services
             get
             {
                 return ServiceLocator.Current.GetInstance<FibonacciViewModel>();
+            }
+        }
+        #endregion
+
+        #region Calculator
+        ///Gets the CRYPTO Property///
+        ///
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+        "CA1822:MarkMembersAsStatic",
+        Justification = "This non-static member is needed for data binding purposes.")]
+
+        public CalculatorViewModel Calculator
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<CalculatorViewModel>();
             }
         }
         #endregion

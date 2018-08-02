@@ -13,7 +13,7 @@ public class NetworkStateHelper_ListenerImplementor
 		__md_methods = 
 			"n_onNetworkStateUpdated:(Z)V:GetOnNetworkStateUpdated_ZHandler:Com.Microsoft.Appcenter.Utils.NetworkStateHelper/IListenerInvoker, Microsoft.AppCenter.Android.Bindings\n" +
 			"";
-		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Utils.NetworkStateHelper+IListenerImplementor, Microsoft.AppCenter.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", NetworkStateHelper_ListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Utils.NetworkStateHelper+IListenerImplementor, Microsoft.AppCenter.Android.Bindings", NetworkStateHelper_ListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class NetworkStateHelper_ListenerImplementor
 	{
 		super ();
 		if (getClass () == NetworkStateHelper_ListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Utils.NetworkStateHelper+IListenerImplementor, Microsoft.AppCenter.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Utils.NetworkStateHelper+IListenerImplementor, Microsoft.AppCenter.Android.Bindings", "", this, new java.lang.Object[] {  });
 	}
 
 

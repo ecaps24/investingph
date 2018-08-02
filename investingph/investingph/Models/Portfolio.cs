@@ -18,7 +18,7 @@ namespace investingph.Models
 
         public double AveragePrice { get; set; }
 
-        public int TotalShares { get; set; }
+        public double TotalShares { get; set; }
 
         public DateTime AddDate { get; set; }
 

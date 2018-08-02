@@ -15,7 +15,7 @@ public class Channel_GroupListenerImplementor
 			"n_onFailure:(Lcom/microsoft/appcenter/ingestion/models/Log;Ljava/lang/Exception;)V:GetOnFailure_Lcom_microsoft_appcenter_ingestion_models_Log_Ljava_lang_Exception_Handler:Com.Microsoft.Appcenter.Channel.IChannelGroupListenerInvoker, Microsoft.AppCenter.Android.Bindings\n" +
 			"n_onSuccess:(Lcom/microsoft/appcenter/ingestion/models/Log;)V:GetOnSuccess_Lcom_microsoft_appcenter_ingestion_models_Log_Handler:Com.Microsoft.Appcenter.Channel.IChannelGroupListenerInvoker, Microsoft.AppCenter.Android.Bindings\n" +
 			"";
-		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Channel.IChannelGroupListenerImplementor, Microsoft.AppCenter.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", Channel_GroupListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Channel.IChannelGroupListenerImplementor, Microsoft.AppCenter.Android.Bindings", Channel_GroupListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class Channel_GroupListenerImplementor
 	{
 		super ();
 		if (getClass () == Channel_GroupListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Channel.IChannelGroupListenerImplementor, Microsoft.AppCenter.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Channel.IChannelGroupListenerImplementor, Microsoft.AppCenter.Android.Bindings", "", this, new java.lang.Object[] {  });
 	}
 
 

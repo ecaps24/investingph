@@ -93,7 +93,8 @@
 				  HorizontalOptions="Center" 
 				  VerticalOptions="Start"
                   BackgroundColor="Black"
-                  Opacity="0.6">
+                  Opacity="0.6"
+                  HeightRequest="50">
                 <Grid.RowDefinitions>
 
                     <RowDefinition Height="Auto" />

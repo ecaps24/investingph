@@ -5,7 +5,7 @@
              x:Class="investingph.Views.StockListPage"
              xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
              xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"
-            xmlns:system="clr-namespace:System;assembly=System.Runtime"
+     
              
             BackgroundColor="Black" 
             Title="{Binding Title}"
@@ -60,7 +60,7 @@
                            Grid.Column="0"     
                            Grid.ColumnSpan="5"
                            Grid.RowSpan="1" >
-                    <Label Text="Initializing..." 
+                <Label Text="Initializing..." 
                            x:Name="lblStatus"
                            TextColor="White" 
                           HorizontalOptions="CenterAndExpand"
@@ -80,7 +80,8 @@
                       IsPullToRefreshEnabled="True"
                       SeparatorColor="Black"     
                       SeparatorVisibility="Default"                  
-                      RefreshCommand="{Binding RefreshCommand}"    
+                      RefreshCommand="{Binding RefreshCommand}"
+                      
                       IsRefreshing="{Binding IsBusy, Mode=TwoWay}"              
                        Grid.Row="1"
                         Grid.Column="0"
@@ -89,11 +90,11 @@
                       
                     >
 
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.ContextActions>
-                                    <MenuItem Text="WatchList" 
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="WatchList" 
                                           CommandParameter="{Binding .}"
                                           Command="AddToWatchListCommand"
                                           Clicked="AddWatchList_Clicked"
@@ -102,45 +103,45 @@
                                           
                             />
 
-                                    <MenuItem Text="BuyStock" 
+                                <MenuItem Text="BuyStock" 
                                           CommandParameter="{Binding .}"
                                           Clicked="AddPortfolio_Clicked"
                                           
                             />
-                                </ViewCell.ContextActions>
+                            </ViewCell.ContextActions>
 
-                                <Grid Padding="35,15,35,15" RowSpacing="0">
+                            <Grid Padding="35,15,35,15" RowSpacing="0">
 
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
 
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"  />
-                                    </Grid.ColumnDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"  />
+                                </Grid.ColumnDefinitions>
 
-                                    <Label Text= "{Binding Symbol}"  
+                                <Label Text= "{Binding Symbol}"  
                                        Grid.Row="0"
                                        Grid.Column="0"
                                        FontSize="15" FontAttributes="Bold"
                                        TextColor="White"
 
                                      />
-                            
-                                    
-                                    <Label Text="{Binding Name}"
+
+
+                                <Label Text="{Binding Name}"
                                    FontSize="10"
                                    Grid.Row="1"
                                    Grid.Column="0"
                                    TextColor="White"
                             />
 
-                                    <Label x:Name="PriceLabel"
+                                <Label x:Name="PriceLabel"
                                     Text="{Binding Price.Amount,
                                     StringFormat='{0:0.0000}'}"
                                    Grid.ColumnSpan="2"
@@ -152,7 +153,7 @@
                                    TextColor="White"
                                    
                             />
-                                    <Label Text="{Binding Change,
+                                <Label Text="{Binding Change,
                                     StringFormat='{0:+0.00;-0.00;0.00}'}"
                                    Grid.Row="1"
                                    Grid.Column="1"
@@ -163,7 +164,7 @@
                                    VerticalOptions="End"
                             />
 
-                                    <Label Text="{Binding PercentChange, StringFormat='(\{0\}%)'}"
+                                <Label Text="{Binding PercentChange, StringFormat='(\{0\}%)'}"
                                    Grid.Row="1"
                                    Grid.Column="2"
                                    FontSize="11" HorizontalOptions="StartAndExpand"
@@ -171,164 +172,12 @@
                                     Converter={StaticResource TextToColorConverter}}"
                             />
 
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
 
-                </ListView>
-
-   
-
-            <!--ROW2-->
-
-
-            <StackLayout x:Name="SortCommands"
-                        IsVisible="False"
-                        Orientation="Horizontal"
-                        HorizontalOptions="Center" 
-                        VerticalOptions="Center"
-                        Grid.Column="0"
-                        Grid.Row="1"
-                      >
-
-                <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <StackLayout Grid.Column="0" Padding="10,0,0,0" Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="End">
-                        <Button x:Name="Gainers"
-                                    Text="Gainers"
-                                    Font="Micro"
-                                    FontSize="8"
-                                    CommandParameter="Gainers"
-                                    Command="{Binding RefreshCommand}"
-                                    Clicked="Gainers_ButtonClicked"
-                                    BackgroundColor="Black" 
-                                    BorderColor="Black"     
-                                    BorderWidth="5"
-                                    BorderRadius="25"
-                                    TextColor="White"
-
-                            />
-
-                        <Button x:Name="Active"
-                                    Text="Active"
-                                    Font="Micro"
-                                    FontSize="8"
-                                    CommandParameter="Active"
-                                    Command="{Binding RefreshCommand}"
-                                    Clicked="Active_ButtonClicked"
-                                    BackgroundColor="Black" 
-                                    BorderColor="Black"    
-                                    BorderWidth="5"                        
-                                    TextColor="White"
-
-                            />
-
-                        <Button x:Name="Volume"
-                                    Text="Volume"
-                                    Font="Micro"
-                                    FontSize="8"
-                                    CommandParameter="Volume"
-                                    Command="{Binding RefreshCommand}"
-                                    Clicked="Volume_ButtonClicked"
-                                    BackgroundColor="Black" 
-                                    BorderColor="Black"   
-                                    BorderWidth="5"
-                                    TextColor="White"
-
-                            />
-                    </StackLayout>
-                </Grid>
-            </StackLayout>  
-
-
-
-            <!--COLUMN2-->
-            
-
-
-
-                    <!--SORT-->
-                    
-                    <views:FloatingActionButton
-                        x:Name="SortButton"
-                        Image="sort.png"
-                        BackgroundColor="#1E252B"
-                        Opacity="0.5"
-                        Clicked="Sort_Clicked"
-                        Grid.Row="3"
-                        Grid.Column="2"
-                        WidthRequest="50"
-                        HeightRequest="30"
-                        IsVisible="False"
-                        
-            
-                 
-                        />
-                    
-                    <!--ACTIVE-->
-                    
-                    <views:FloatingActionButton
-                        x:Name="Active_Button"
-                        Image="sortactive.png"
-                        BackgroundColor="#1E252B"
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        HorizontalOptions="End"
-                        Opacity="0.7"
-                        IsVisible="False"
-                        Clicked="Active_ButtonClicked"
-                        CommandParameter="Active"
-                        Command="{Binding RefreshCommand}"
-
-                        />
-
-                    <!--GAINERS-->
-
-                    <views:FloatingActionButton
-                        x:Name="Gainers_Button"                 
-                        Image="sortgainers.png"
-                        BackgroundColor="#1E252B"
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        VerticalOptions="End"
-                        Opacity="0.7"
-                        IsVisible="False"
-                        Clicked="Gainers_ButtonClicked"
-                        CommandParameter="Gainers"
-                        Command="{Binding RefreshCommand}"
-
-                        />
-
-                    <!--VOLUME-->
-
-                    <views:FloatingActionButton
-                        x:Name="Volume_Button"
-                        Image="sortvolume.png"
-                        BackgroundColor="#1E252B"
-                        Grid.Row="3"
-                        Grid.Column="3"
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        HorizontalOptions="Start"
-                        Opacity="0.7"
-                        IsVisible="False"
-                        Clicked="Volume_ButtonClicked"
-                        CommandParameter="Volume"
-                        Command="{Binding RefreshCommand}"
-                        />
-
-    
-
-            <!--ROW3-->
-
+            </ListView>
 
 
             <StackLayout 

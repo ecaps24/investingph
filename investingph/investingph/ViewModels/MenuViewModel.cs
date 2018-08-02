@@ -18,6 +18,7 @@ namespace investingph.ViewModels
         public ICommand GoTABCommand { get; set; }
         public ICommand GoSearchCommand { get; set; }
         public ICommand GoFibonacciCommand { get; set; }
+        public ICommand GoCalculatorCommand { get; set; }
 
         private List<Menu_> _menuList;
 
@@ -43,10 +44,13 @@ namespace investingph.ViewModels
             GoTABCommand = new Command(GoTABPage);
             GoSearchCommand = new Command(GoSearchPage);
             GoFibonacciCommand = new Command(GoFibonacciPage);
+            GoCalculatorCommand = new Command(GoCalculatorPage);
+
 
 
             AddMenu();
         }
+
 
 
         void AddMenu()
@@ -57,8 +61,10 @@ namespace investingph.ViewModels
             MenuList.Add(new Menu_ { ImgSource= "home.png", Item = "Home"} );
             MenuList.Add(new Menu_ { ImgSource = "stock.png", Item = "Stocks" });
             MenuList.Add(new Menu_ { ImgSource = "bitcoin.png", Item = "CryptoCurrency" });
-            MenuList.Add(new Menu_ { ImgSource = "stocks.png", Item = "Fibonacci Calculator" });
+            //MenuList.Add(new Menu_ { ImgSource = "stocks.png", Item = "Fibonacci Calculator" });
+            MenuList.Add(new Menu_ { ImgSource = "calculator.png", Item = "Calculator" });
             MenuList.Add(new Menu_ { ImgSource = "settings.png", Item = "Settings" });
+
 
             MenuList = MenuList;
         }
@@ -95,6 +101,12 @@ namespace investingph.ViewModels
         void GoFibonacciPage(object obj)
         {
             App.Locator.NavigationService.NavigateTo(Locator.FibonacciPage);
+            App.MenuIsPresented = false;
+        }
+
+        void GoCalculatorPage(object obj)
+        {
+            App.Locator.NavigationService.NavigateTo(Locator.CalculatorPage);
             App.MenuIsPresented = false;
         }
 

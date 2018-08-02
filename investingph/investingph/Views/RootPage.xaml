@@ -16,12 +16,13 @@
 
     <MasterDetailPage.ToolbarItems x:Uid="toolbar">
 
-        <ToolbarItem Text="Sort"
+        <!--<ToolbarItem Text="Sort"
                      Icon="sorter.png"
                      x:Name="SortToolBar"
+                     Clicked="SortClicked"
 
-                     Command="{Binding SortCommand}"
-                     />
+            
+                     />-->
 
         <ToolbarItem Text="Search" 
                      Icon="search.png" 

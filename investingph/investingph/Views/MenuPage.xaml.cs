@@ -56,6 +56,9 @@ namespace investingph.Views
             if(i.Item=="Fibonacci Calculator")
                 await App.Locator.NavigationService.NavigateTo(Locator.FibonacciPage);
 
+            if (i.Item == "Calculator")
+                await App.Locator.NavigationService.NavigateTo(Locator.CalculatorPage);
+
 
             App.MenuIsPresented = false;
     

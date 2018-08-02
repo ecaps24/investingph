@@ -30,6 +30,21 @@ namespace investingph.Views
             //root.RemoveToolBar(SearchToolBar);
         }
 
+        async void SortClicked(object sender, EventArgs e)
+        {
+            string sort = await DisplayActionSheet(
+                "", "",
+                null, "Active", "Gainers", "Losers", "Volume");
+            if (sort == "") return;
+            StockListPage slp = new StockListPage();
+            //StockListViewModel svm = new StockListViewModel();
+
+            await slp.RefreshItemSource(sort);
+            //svm.RefreshCommand.CanExecute(sort);
+            //svm.RefreshCommand.Execute(sort);
+        }
+
+
         async void AddClicked(object sender, EventArgs e)
         {
             //await DisplayActionSheet("", "",

@@ -1,7 +1,6 @@
 C:\XFDev\investingph\investingph\investingph\bin\Release\netstandard2.0\investingph.deps.json
 C:\XFDev\investingph\investingph\investingph\bin\Release\netstandard2.0\investingph.dll
 C:\XFDev\investingph\investingph\investingph\bin\Release\netstandard2.0\investingph.pdb
-C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.csprojResolveAssemblyReference.cache
 C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.csproj.CoreCompileInputs.cache
 C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.App.xaml.g.cs
 C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.MainPage.xaml.g.cs
@@ -20,3 +19,7 @@ C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investin
 C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.AssemblyInfo.cs
 C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.dll
 C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.pdb
+C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.Views.CalculatorPage.xaml.g.cs
+C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.Views.Calculators.RiskRewardPage.xaml.g.cs
+C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.Views.Calculators.WeightedAveragePage.xaml.g.cs
+C:\XFDev\investingph\investingph\investingph\obj\Release\netstandard2.0\investingph.csprojAssemblyReference.cache

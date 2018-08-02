@@ -94,6 +94,7 @@ namespace investingph.Views
                 try
                 {
                     lstView.BeginRefresh();
+
                 }
                 catch (Exception e)
                 {
@@ -113,69 +114,31 @@ namespace investingph.Views
 
             StockServices services = new StockServices();
 
-            //ObservableCollection<Stock> stocks = new ObservableCollection<Stock>();
-            //stocks = new ObservableCollection<Stock>(
-            //    await services.GetStockList(param));
-            svm.RefreshListView(param);
-            if ((svm != null) && (svm.RefreshCommand.CanExecute(param)))
-            {
-                svm.RefreshCommand.Execute(param);
-            }
+            //svm.RefreshCommand.Execute(null);
 
-            //lstView.BeginRefresh();
-            //lstView.ItemsSource = stocks;
-            //lstView.EndRefresh();
+            //svm.RefreshListView(param);
+            //if ((svm != null) && (svm.RefreshCommand.CanExecute(param)))
+            //{
+            //    svm.RefreshCommand.Execute(param);
+            //}
 
-        }
+            ObservableCollection<Stock> stocks = new ObservableCollection<Stock>();
 
-        async void Gainers_ButtonClicked(object sender, EventArgs e)
-        {
-            await Gainers_Button.ScaleTo(1.25, 100, Easing.BounceOut);
-            await Task.Delay(200);
-            await Gainers_Button.ScaleTo(1, 100, Easing.BounceOut);
-        }
 
-        async void Active_ButtonClicked(object sender, EventArgs e)
-        {
-            await Active_Button.ScaleTo(1.25, 100, Easing.BounceOut);
-            await Task.Delay(200);
-            await Active_Button.ScaleTo(1, 100, Easing.BounceIn);
-        }
-
-        async void Volume_ButtonClicked(object sender, EventArgs e)
-        {
-            await Volume_Button.ScaleTo(1.25, 100, Easing.BounceIn);
-            await Task.Delay(200);
-            await Volume_Button.ScaleTo(1, 100, Easing.BounceIn);
-
-        }
-
-        async void Sort_Clicked(object sender, EventArgs e)
-        {
-            int animationSpeed = 5;
-            if (Active_Button.IsVisible==false)
-            {
-                Active_Button.IsVisible = true;
-                await Active_Button.ScaleTo(1, 100, Easing.CubicOut);
-                await Task.Delay(animationSpeed);
-                Gainers_Button.IsVisible = true;
-                await Gainers_Button.ScaleTo(1, 100, Easing.CubicOut);
-                await Task.Delay(animationSpeed);
-                Volume_Button.IsVisible = true;
-                await Volume_Button.ScaleTo(1, 100, Easing.CubicOut);
-                await Task.Delay(animationSpeed);
-                return;
-            }
-
-            Volume_Button.IsVisible = false;
-            await Task.Delay(animationSpeed);
-            Gainers_Button.IsVisible = false;
-            await Task.Delay(animationSpeed);
-            Active_Button.IsVisible = false;
-            await Task.Delay(animationSpeed);
+            var s= lstView.ItemsSource;
+       
+             
+            //lstView.ItemsSource =
+            //    stocks.OrderByDescending(s => s.PercentChange);
+            //lstView.RefreshCommand.Execute(param);
             
 
+       //     txtSort.Text = param;
         }
+
+       
+
+
 
         async Task AddWatchList_Clicked(object sender, EventArgs e)
         {

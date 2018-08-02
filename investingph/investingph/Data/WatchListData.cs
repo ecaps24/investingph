@@ -13,7 +13,7 @@ namespace investingph.Data
 {
     public class WatchListData : BaseData
     {
-
+        public bool Exists { get; set; }
         public WatchListData(string dbPath)
         {
             try
@@ -40,7 +40,7 @@ namespace investingph.Data
             catch (Exception e)
             {
 
-                StatusMessage = $"Failed to add {watch.Symbol}. Error: {e.Message}";
+                StatusMessage = $"Failed to add {watch.Symbol}. Stock already exists in WatchList";
 
             }
             Debug.WriteLine(StatusMessage);
@@ -72,8 +72,23 @@ namespace investingph.Data
             return ow;
         }
 
+        public async Task RecordExists()
+        {
+            var allItems = await conn.Table<WatchList>().ToListAsync();
+            int count = allItems.Count();
+            Exists= count == 0 ? false : true;
+        }
+
         public async Task DeleteStockAsync(string symbol)
         {
+            var items = await conn.Table<WatchList>().ToListAsync();
+            var count = items.Count();
+            if (count==1)
+            {
+                StatusMessage = "Watchlist must have at least one record.";
+                return;
+            }
+
             ObservableCollection<WatchList> list = new ObservableCollection<WatchList>(
                      await GetWatchListAsync());
             var watch = list.Where(s => s.Symbol == symbol).FirstOrDefault();

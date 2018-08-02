@@ -141,6 +141,7 @@ class MonoPackageManager_Resources {
 		"SQLitePCLRaw.lib.e_sqlite3.dll",
 		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"SuaveControls.FloatingActionButton.dll",
+		"SuaveControls.FloatingActionButton.Droid.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Annotations.dll",
 		"Xamarin.Android.Support.Compat.dll",

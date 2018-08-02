@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.Calculators.WeightedAveragePage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+             xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"             
+             Title="{Binding Title}"
+             BackgroundColor="Black"
+             >
+
+    <ContentPage.BindingContext>
+        <ViewModels:WeightedAverageViewModel/>
+    </ContentPage.BindingContext>
+
+
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TextToColorConverter x:Key="TextToColorConverter" />
+            <converters:IncrementConverter x:Key="IncrementConverter" />
+
+
+            <Color x:Key="LabelColor">WhiteSmoke</Color>
+            <Color x:Key="ContentColor">White</Color>
+
+            <Color x:Key="LabelSummaryColor">White</Color>
+            <Color x:Key="ContentSummaryColor">FloralWhite</Color>
+
+
+            <Style x:Key="TextToColorConverterReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{Binding NetGain, 
+                    Converter={StaticResource TextToColorConverter}}"/>
+            </Style>
+
+
+
+            <Style x:Key="LabelReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelColor}"/>
+
+            </Style>
+
+
+            <Style x:Key="ContentReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentColor}"/>
+            </Style>
+
+            <Style x:Key="LabelSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelSummaryColor}"/>
+
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="ContentSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+            </Style>
+
+
+            <Style x:Key="SignReference" TargetType="Label">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout 
+            Padding="20" Spacing="7" 
+            BackgroundColor="#1E252B"
+            >
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height=".5"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height=".5"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height=".5"/>
+
+
+
+                    </Grid.RowDefinitions>
+
+
+
+                    <Label Text="Stock"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                       />
+
+                    <Entry x:Name="entryStock"
+                       Grid.Row="0"
+                       Grid.Column="2"
+                       Style="{StaticResource ContentReference}"                       
+                       PlaceholderColor="{StaticResource LabelColor}"                         
+                       />
+
+
+                    <BoxView WidthRequest="1" HeightRequest="1"
+                         Color="#1E252B"
+                        Grid.Row="1"
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="3"/>
+
+
+                    <Label Text="Current Shares"
+                       
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                       />
+
+                    <Label Text="  -  "
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                     >
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding DeductValueCommand}"
+                                CommandParameter="{x:Reference entryCurrentShares}"
+                                
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+                    <Entry x:Name="entryCurrentShares"
+                       Grid.Row="2"
+                       Grid.Column="2"
+                       Text="{Binding CurrentShares, Mode=TwoWay}"
+                       Keyboard="Numeric"
+                       Style="{StaticResource ContentReference}"                       
+                       PlaceholderColor="{StaticResource LabelColor}" 
+                       Placeholder="Enter Current Shares"
+                       />
+
+                    <Label Text="+"
+                           Grid.Row="2"
+                           Grid.Column="3"
+                           VerticalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                           >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding AddValueCommand}"
+                                CommandParameter="{x:Reference entryCurrentShares}"
+                         />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+                    <!--average price-->
+
+
+
+
+                    <Label Text="Average Price"
+                       
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                        
+                       />
+
+                    <Label Text="  -  "
+                           Grid.Row="3"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                     >
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding DeductValueCommand}"
+                                CommandParameter="{x:Reference entryAveragePrice}"
+                                
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+
+
+                    <Entry x:Name="entryAveragePrice"
+                       Grid.Row="3"
+                       Grid.Column="2"
+                        Text="{Binding AveragePrice, Mode=TwoWay}"
+                       Keyboard="Numeric"
+                       Style="{StaticResource ContentReference}"                       
+                       PlaceholderColor="{StaticResource LabelColor}"                         
+                       Placeholder="Enter Average Price"
+                       
+                       />
+
+                    <Label Text="+"
+                           Grid.Row="3"
+                           Grid.Column="3"
+                           VerticalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                           >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding AddValueCommand}"
+                                CommandParameter="{x:Reference entryAveragePrice}"
+                         />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+                    <!--insert current capital here...-->
+
+
+
+
+                    <BoxView WidthRequest="1" HeightRequest="1" Color="#1E252B"
+                        Grid.Row="4"
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="3"/>
+
+                    <Label Text="Shares To Add"
+                       
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                        
+                       />
+
+
+                    <Label Text="  -  "
+                           Grid.Row="5"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                     >
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding DeductValueCommand}"
+                                CommandParameter="{x:Reference entryNewShares}"
+                                
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+                    <Entry x:Name="entryNewShares"
+                       Grid.Row="5"
+                       Grid.Column="2"
+                       Text="{Binding NewShares, Mode=TwoWay}"
+                       Keyboard="Numeric"
+                       Style="{StaticResource ContentReference}"                       
+                       PlaceholderColor="{StaticResource LabelColor}"                         
+                       Placeholder="Enter New Shares"
+                      
+                       />
+
+
+                    <Label Text="+"
+                           Grid.Row="5"
+                           Grid.Column="3"
+                           VerticalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                           >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding AddValueCommand}"
+                                CommandParameter="{x:Reference entryNewShares}"
+                         />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+
+
+                    <!--new shares price-->
+
+
+
+
+                    <Label Text="New Shares' Price"
+                       
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"   
+                  
+                       />
+
+                    <Label Text="  -  "
+                           Grid.Row="6"
+                           Grid.Column="1"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                     >
+
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding DeductValueCommand}"
+                                CommandParameter="{x:Reference entryNewSharesPrice}"
+                                
+                                />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Entry x:Name="entryNewSharesPrice"
+                       Grid.Row="6"
+                       Grid.Column="2"
+                       Text="{Binding NewSharesPrice, Mode=TwoWay}"
+                        Keyboard="Numeric"
+                       Style="{StaticResource ContentReference}"                       
+                       PlaceholderColor="{StaticResource LabelColor}" 
+                       Placeholder="Enter New Entry Price"
+                       
+                       />
+
+
+                    <Label Text="+"
+                           Grid.Row="6"
+                           Grid.Column="3"
+                           VerticalOptions="Center"
+                           Style="{StaticResource SignReference}"
+                           >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding AddValueCommand}"
+                                CommandParameter="{x:Reference entryNewSharesPrice}"
+                         />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label Text="New Shares' Value"
+                      TextColor="Red"
+                       Grid.Row="7"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                        
+                       />
+
+
+
+
+
+                    <Label x:Name="entryBP"
+                       Grid.Row="7"
+                       Grid.Column="2"
+                       Text="{Binding BuyingPower,
+                           StringFormat='{0:N}'}"
+                     
+                       Style="{StaticResource ContentReference}"                       
+                        VerticalOptions="Center"
+                       TextColor="Red"
+                       
+                       />
+
+
+
+                    <!--<BoxView WidthRequest="1" HeightRequest="1" Color="Green"
+                        Grid.Row="8"
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="3"/>-->
+
+
+
+                </Grid>
+
+
+                <!--totals-->
+
+                <Grid Padding="0,20,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="1"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="15*"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView WidthRequest="1" HeightRequest="1" Color="Green"
+                        Grid.Row="0"
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="3"/>
+
+
+
+
+                    <Label Text="Total Shares"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                        
+                        FontSize="20"  
+                       />
+
+                    <Label Text="{Binding TotalShares,
+                             StringFormat='{0:N}'}"    
+                        Grid.Row="1"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                        
+                        FontSize="20"   
+                       TextColor="OrangeRed"
+                       
+                   />
+
+                    <Label Text="Average Price"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                        
+                        FontSize="20"                         
+                       />
+
+                    <Label Text="{Binding TotalAveragePrice}"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                        FontSize="20"     
+                        TextColor="OrangeRed"
+
+                       />
+
+
+
+                    <Label Text="Capital"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                        
+                        FontSize="20" 
+                       
+                       />
+
+                    <Label Text="{Binding Capital,
+                       StringFormat='{0:N}'}"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                        FontSize="20"   
+                       TextColor="OrangeRed"
+                       />
+
+                    <BoxView WidthRequest="1" HeightRequest="1" Color="Red"
+                        Grid.Row="4"
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="3"/>
+
+
+                </Grid>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

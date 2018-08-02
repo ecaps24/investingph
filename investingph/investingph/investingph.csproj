@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Data\Company.csv" />
-    <EmbeddedResource Include="Files\1Company.txt" />
     <EmbeddedResource Include="Files\Company.txt" />
     <EmbeddedResource Include="Files\Holidays.txt" />
   </ItemGroup>
@@ -46,12 +45,30 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="MainPage.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\CalculatorPage.xaml.cs">
+      <DependentUpon>CalculatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Calculators\RiskRewardPage.xaml.cs">
+      <DependentUpon>RiskRewardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Calculators\WeightedAveragePage.xaml.cs">
+      <DependentUpon>WeightedAveragePage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\PortfolioAddEditPage.xaml.cs">
       <DependentUpon>PortfolioAddEditPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\CalculatorPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Calculators\RiskRewardPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Calculators\WeightedAveragePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\FibonacciPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -89,5 +106,6 @@
 
   <ItemGroup>
     <Folder Include="Commands\" />
+    <Folder Include="ViewModels\Calculators\" />
   </ItemGroup>
 </Project>

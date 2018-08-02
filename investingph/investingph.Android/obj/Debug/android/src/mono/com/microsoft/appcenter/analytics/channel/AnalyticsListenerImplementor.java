@@ -15,7 +15,7 @@ public class AnalyticsListenerImplementor
 			"n_onSendingFailed:(Lcom/microsoft/appcenter/ingestion/models/Log;Ljava/lang/Exception;)V:GetOnSendingFailed_Lcom_microsoft_appcenter_ingestion_models_Log_Ljava_lang_Exception_Handler:Com.Microsoft.Appcenter.Analytics.Channel.IAnalyticsListenerInvoker, Microsoft.AppCenter.Analytics.Android.Bindings\n" +
 			"n_onSendingSucceeded:(Lcom/microsoft/appcenter/ingestion/models/Log;)V:GetOnSendingSucceeded_Lcom_microsoft_appcenter_ingestion_models_Log_Handler:Com.Microsoft.Appcenter.Analytics.Channel.IAnalyticsListenerInvoker, Microsoft.AppCenter.Analytics.Android.Bindings\n" +
 			"";
-		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Analytics.Channel.IAnalyticsListenerImplementor, Microsoft.AppCenter.Analytics.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", AnalyticsListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Com.Microsoft.Appcenter.Analytics.Channel.IAnalyticsListenerImplementor, Microsoft.AppCenter.Analytics.Android.Bindings", AnalyticsListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class AnalyticsListenerImplementor
 	{
 		super ();
 		if (getClass () == AnalyticsListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Analytics.Channel.IAnalyticsListenerImplementor, Microsoft.AppCenter.Analytics.Android.Bindings, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Com.Microsoft.Appcenter.Analytics.Channel.IAnalyticsListenerImplementor, Microsoft.AppCenter.Analytics.Android.Bindings", "", this, new java.lang.Object[] {  });
 	}
 
 

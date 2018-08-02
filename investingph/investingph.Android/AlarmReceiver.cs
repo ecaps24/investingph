@@ -63,7 +63,7 @@ namespace investingph.Droid
 
             var open = title.Contains("Open");
             var close = title.Contains("Close");
-            var timeAhead = 10;
+            var timeAhead = 7;
             var ahead = marketTime.SampleTime.AddMinutes(30);
             var t = marketTime.SampleTime > marketTime.ManilaTime;
 

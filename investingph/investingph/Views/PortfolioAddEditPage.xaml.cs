@@ -45,7 +45,7 @@ namespace investingph.Views
             var vm = BindingContext as PortfolioAddEditViewModel;
             var edit = Title=="Edit Portfolio" ? true : false;
             var avg = Convert.ToDouble(EntryAvgPrice.Text);
-            var shares = Convert.ToInt32(SharesEntry.Text);
+            var shares = Convert.ToDouble(SharesEntry.Text);
             if (avg==0 || shares == 0)
             {
                 await DisplayAlert("investing.ph", "Total Shares or Average Price" +

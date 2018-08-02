@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>investingph.Droid</RootNamespace>
     <AssemblyName>investingph.Android</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -29,13 +29,13 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <EnableProguard>true</EnableProguard>
-    <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -53,7 +53,7 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <EnableProguard>true</EnableProguard>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
-    <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
@@ -157,16 +157,10 @@
     <AndroidResource Include="Resources\drawable\account.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\inv.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\stock.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\account.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\inv.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\stock.png" />
@@ -178,13 +172,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\account.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\inv.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\account.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\inv.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\stock.png" />
@@ -250,9 +238,6 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\analytics.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\loupe.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\back.png" />
   </ItemGroup>
   <ItemGroup>
@@ -269,18 +254,6 @@
     <Folder Include="Resources\data\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\sort.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\sort.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\sort.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\sort.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\circle.png" />
   </ItemGroup>
   <ItemGroup>
@@ -292,31 +265,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\search1.png" />
     <AndroidResource Include="Resources\drawable\search.png" />
-    <AndroidResource Include="Resources\drawable\sort2.png" />
     <AndroidResource Include="Resources\drawable\fib.PNG" />
-    <AndroidResource Include="Resources\drawable\pheconomy.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\pheconomy.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\pheconomy.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\pheconomy.png" />
     <AndroidResource Include="Resources\drawable\stocks.png" />
     <AndroidResource Include="Resources\drawable-hdpi\stocks.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\stocks.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\stocks.png" />
-    <AndroidResource Include="Resources\drawable\asortvolume.png" />
-    <AndroidResource Include="Resources\drawable\asortgainers.png" />
     <AndroidResource Include="Resources\drawable\circle.png" />
-    <AndroidResource Include="Resources\drawable\sortvolume.png" />
-    <AndroidResource Include="Resources\drawable\sortactive.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\sortactive.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\sortgainers.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\sortvolume.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\sortactive.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\sortgainers.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\sortvolume.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\sortactive.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\sortgainers.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\sortvolume.png" />
-    <AndroidResource Include="Resources\drawable\sortgainers.png" />
     <AndroidResource Include="Resources\drawable\plus.png" />
     <AndroidResource Include="Resources\drawable-hdpi\plus.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\plus.png" />
@@ -329,6 +283,14 @@
     <AndroidResource Include="Resources\drawable-hdpi\sorter.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\sorter.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\sorter.png" />
+    <AndroidResource Include="Resources\drawable\leftarrow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\leftarrow.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\leftarrow.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\leftarrow.png" />
+    <AndroidResource Include="Resources\drawable\calculator.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\calculator.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\calculator.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\calculator.png" />
     <Content Include="Stock.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

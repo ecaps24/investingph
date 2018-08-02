@@ -84,9 +84,6 @@
 
 
             <Grid>
-                
-
-
                     <Label Text="  -  "
                            Grid.Row="0"
                            Grid.Column="1"
@@ -219,8 +216,9 @@
                    Grid.Row="1"
                    Grid.Column="2"
                    Keyboard="Numeric"
-                   Style="{StaticResource ContentReference}"                       
                    Text="{Binding LowPrice, Mode=TwoWay}"
+
+                   Style="{StaticResource ContentReference}"                       
                    PlaceholderColor="{StaticResource LabelColor}"                         
                       
                />

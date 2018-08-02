@@ -38,7 +38,8 @@ namespace investingph.ViewModels
         public StockListViewModel()
         {
 
-            _refreshCommand = new Command<string>(RefreshListView);
+            _refreshCommand = new Command<string>
+                (RefreshListView);
             Title = "Stocks";
             StatusMessage = "This is a test...";
             RefreshListView();
@@ -56,6 +57,7 @@ namespace investingph.ViewModels
                 (await stockServices.GetStockList(parameters));
 
             StockList = list;
+     
             IsBusy = false;
 
         }

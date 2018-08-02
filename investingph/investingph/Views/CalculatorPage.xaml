@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:local="clr-namespace:investingph.Views.Calculators"
+           xmlns:local1="clr-namespace:investingph.Views"
+
+            x:Class="investingph.Views.CalculatorPage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+             xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"
+            
+            
+
+            Title="{Binding Title}"
+            >
+
+
+
+    <ContentPage.BindingContext>
+        <ViewModels:CalculatorViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <local:RiskRewardPage/>
+    <local:WeightedAveragePage/>
+    <local1:FibonacciPage/>
+
+
+</TabbedPage>

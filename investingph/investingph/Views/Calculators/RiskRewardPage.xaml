@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="investingph.Views.Calculators.RiskRewardPage"
+             xmlns:ViewModels="clr-namespace:investingph.ViewModels;assembly=investingph"
+             xmlns:converters="clr-namespace:investingph.Converters;assembly=investingph"             
+             
+             Title="{Binding Title}"
+             BackgroundColor="Black"             
+             
+             >
+
+    <ContentPage.BindingContext>
+        <ViewModels:RiskRewardViewModel/>
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TextToColorConverter x:Key="TextToColorConverter" />
+            <converters:IncrementConverter x:Key="IncrementConverter" />
+
+
+            <Color x:Key="LabelColor">WhiteSmoke</Color>
+            <Color x:Key="ContentColor">White</Color>
+
+            <Color x:Key="LabelSummaryColor">WhiteSmoke</Color>
+            <Color x:Key="ContentSummaryColor">FloralWhite</Color>
+
+
+            <Style x:Key="TextToColorConverterReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{Binding NetGain, 
+                    Converter={StaticResource TextToColorConverter}}"/>
+            </Style>
+
+
+
+            <Style x:Key="LabelReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelColor}"/>
+
+            </Style>
+
+
+            <Style x:Key="ContentReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentColor}"/>
+            </Style>
+
+            <Style x:Key="LabelSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="{StaticResource LabelSummaryColor}"/>
+
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="ContentSummaryReference" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+            </Style>
+
+
+            <Style x:Key="SignReference" TargetType="Label">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="TextColor" Value="{StaticResource ContentSummaryColor}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <ScrollView>
+
+            <StackLayout
+            Padding="20" Spacing="7" 
+            BackgroundColor="#1E252B"            
+            >
+
+
+
+
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="110" />
+                        <ColumnDefinition Width="180"/>
+
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Text="Stock"
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                       />
+
+                    <Entry x:Name="entryStock"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       Style="{StaticResource ContentReference}"                       
+                       PlaceholderColor="{StaticResource LabelColor}"                         
+                       />
+
+
+                    <Label Text="Capital (Calculated)"
+                       Grid.Row="1"
+                       Grid.Column="0"                       
+                       VerticalOptions="CenterAndExpand"
+                       Style="{StaticResource LabelReference}"   
+                       FontSize="Micro"    
+                       TextColor="Red"
+                       />
+
+
+
+
+                    <Label 
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding Capital,
+                           StringFormat='{0:N}'}"
+                       VerticalOptions="CenterAndExpand"
+                        TextColor="Red"
+                     
+                       x:Name="entryCapital"
+                      Style="{StaticResource ContentReference}"                       
+                       />
+
+
+
+                    <Label Text="Shares"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                       
+                       />
+
+
+                    <Entry 
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       Text="{Binding Shares, Mode=TwoWay}" 
+                       Style="{StaticResource ContentReference}"  
+                       Placeholder="Enter Shares to buy"
+                        Keyboard="Numeric"
+                       />
+
+                    <Stepper Minimum="0" Maximum="99999999999999"
+                         Increment="100"
+                         Value="{Binding Shares, Mode=TwoWay}"
+                         x:Name="stepperCapital"
+                         Grid.Row="2"
+                         Grid.Column="2"
+  
+                         Opacity="0.2"
+                         
+                         />
+
+
+
+
+
+
+
+                    <Label Text="Entry Price"
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       
+                       Style="{StaticResource LabelReference}"                       
+                       
+                       
+                       />
+
+                    <Entry Placeholder="Enter amount"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       Text="{Binding EntryPrice, Mode=TwoWay},
+                           StringFormat='{0:N}'}"                    
+                       Keyboard="Numeric"     
+                       x:Name="PriceEntry"
+                       PlaceholderColor="{StaticResource LabelColor}"                            
+                      Style="{StaticResource ContentReference}"                       
+                       />
+
+                    <Stepper Minimum="0" Maximum="5000" 
+                         Increment="{Binding EntryPrice,
+                               Converter={StaticResource IncrementConverter}}"
+                         Value="{Binding EntryPrice, Mode=TwoWay}"
+                         Grid.Row="3"
+                         Grid.Column="2"
+                         x:Name="entryStepper"
+                         Opacity="0.2"                       
+                         
+                         
+                         />
+
+
+
+
+                    <Label Text="Target Price"
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                       
+                       />
+
+                    <Entry Placeholder="Enter amount"
+                       Grid.Row="4"
+                       Grid.Column="1"
+                       Text="{Binding TargetPrice, Mode=TwoWay},
+                           StringFormat='{0:N}'}"                    
+                       x:Name="entryTargetPrice"
+                       Keyboard="Numeric"     
+                       PlaceholderColor="{StaticResource LabelColor}"                            
+                      Style="{StaticResource ContentReference}"                       
+                       />
+
+                    <Stepper Minimum="0" Maximum="5000"
+                        Increment="{Binding TargetPrice,
+                               Converter={StaticResource IncrementConverter}}"
+                         Value="{Binding TargetPrice, Mode=TwoWay}" 
+                         x:Name="stepperTargetPrice"
+
+
+                         Grid.Row="4"
+                         Grid.Column="2"
+                         Opacity="0.2"
+                         />
+
+
+
+                    <Label Text="Stop Loss"
+                       Grid.Row="5"
+                       Grid.Column="0"
+
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                       
+                       
+                       
+                       />
+
+
+
+                    <Entry Placeholder="Enter amount"
+                       Grid.Row="5"
+                       Grid.Column="1"
+                       Text="{Binding StopLoss, Mode=TwoWay},
+                           StringFormat='{0:N}'}"                    
+                       x:Name="entryStopLoss"
+                       Keyboard="Numeric"                     
+                      Style="{StaticResource ContentReference}"        
+                       PlaceholderColor="{StaticResource LabelColor}"                         
+                       />
+
+                    <Stepper Minimum="0" Maximum="5000" 
+                        Increment="{Binding StopLoss,
+                               Converter={StaticResource IncrementConverter}}"
+                         Value="{Binding StopLoss, Mode=TwoWay}"  
+                         x:Name="stepperStopLoss"   
+
+                         Grid.Row="5"
+                         Grid.Column="2"
+                         Opacity="0.2"                         
+                         />
+
+
+
+
+
+                </Grid>
+
+
+
+
+                <StackLayout Padding="15" />
+
+                <Grid RowSpan="4" ColumnSpacing="20">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="1"/>
+
+
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+
+
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView WidthRequest="1" HeightRequest="1" Color="Green"
+                         Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0"/>
+
+
+                    <Label Text="REWARD"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+
+                       Style="{StaticResource LabelReference}"  
+                        FontSize="23"                       
+                       />
+
+                    <Label x:Name="GainPercent"
+           
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding PercentGain
+                          , StringFormat='\{0\}%'}"
+                       VerticalOptions="Center"
+                       HorizontalOptions="EndAndExpand"
+                       
+                       Style="{StaticResource ContentReference}"                         
+                       TextColor="{Binding AmountGain, 
+                        Converter={StaticResource TextToColorConverter}}"
+                        FontSize="23"                        
+                       />
+
+                    <Label x:Name="GainAmount"
+
+                       Grid.Row="1"
+                       Grid.Column="2"
+                       Text="{Binding AmountGain,
+                                    StringFormat='{0:+0.00;-0.00;0.00}'}"
+                        TextColor="{Binding AmountGain, 
+                        Converter={StaticResource TextToColorConverter}}"
+                        FontSize="23"                        
+                       VerticalOptions="Center"
+                       HorizontalOptions="EndAndExpand"
+                       
+                       Style="{StaticResource ContentReference}"                        
+                       />
+
+                    <Label Text="RISK"
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       Style="{StaticResource LabelReference}"                         
+                        FontSize="23"                        
+                       />
+
+                    <Label x:Name="LossPercent"
+                       Text="{Binding PercentLoss,
+                            StringFormat='\{0\}%'}"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       HorizontalOptions="EndAndExpand"
+                       
+                       Style="{StaticResource ContentReference}"                        
+                       TextColor="{Binding AmountLoss, 
+                        Converter={StaticResource TextToColorConverter}}"
+                        FontSize="23" 
+                       
+                       />
+
+                    <Label x:Name="LossAmount"
+                       Text="{Binding AmountLoss,
+                                    StringFormat='{0:+0.00;-0.00;0.00}'}"
+                        TextColor="{Binding AmountLoss, 
+                        Converter={StaticResource TextToColorConverter}}"
+                        FontSize="23" 
+                       Grid.Row="2"
+                       Grid.Column="2"
+                       VerticalOptions="Center"
+                       HorizontalOptions="EndAndExpand"
+                       
+                       Style="{StaticResource ContentReference}"                        
+                       />
+
+                    <BoxView WidthRequest="1" HeightRequest="1" Color="Red"
+                        Grid.Row="3"
+                       Grid.Column="0" Grid.ColumnSpan="3"/>
+
+                </Grid>
+
+                <Label Text="{Binding StatusMessage}"
+                      Style="{StaticResource ContentReference}"   
+                   TextColor="Red"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   />
+
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+
+
+
+</ContentPage>

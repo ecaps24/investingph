@@ -13,63 +13,70 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="8*"/>
-                </Grid.RowDefinitions>
-                <BoxView BackgroundColor="#1E252B"
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand" />
 
-                <StackLayout Orientation="Horizontal"
-                             Grid.Row="0" Margin="20" 
-                             BackgroundColor="#1E252B">
-                <Grid    BackgroundColor="#1E252B"
-                         Opacity="0.5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="30"/>
-                        </Grid.RowDefinitions>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="30"/>
-                        </Grid.ColumnDefinitions>
-                        <Image Source="back.png"
-                             Grid.Row="0" Grid.Column="0">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="Back_Clicked"/>
-                            </Image.GestureRecognizers>
-                            
-                        </Image>
-                    </Grid>
+        <StackLayout Padding="5">
+            <StackLayout Orientation="Horizontal"
+                  Padding="5"
+                         Spacing="0"
+                            >
+
+
+                <Grid HorizontalOptions="Start">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="leftarrow.png"
+                             Grid.Row="0" Grid.Column="0"
+                           Aspect="AspectFit"
+                           x:Name="BackIcon"
+
+                           >
+                        
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Back_Clicked"/>
+                        </Image.GestureRecognizers>
+
+                    </Image>
+                </Grid>
+
                     <SearchBar x:Name="SearchStock"
-                            Placeholder="Search Stock" 
-                           CancelButtonColor="Red" 
-                           BackgroundColor="Black"
-                           TextColor="White"    
-                           PlaceholderColor="White"
-                           Opacity="0.5"
-                           TextChanged="SearchBar_TextChanged"
-                           />
-                </StackLayout>
+                                Placeholder="Search Stock" 
+                               CancelButtonColor="Red" 
+                               
+            
+                               TextColor="White"    
+                               PlaceholderColor="White"
+                               Opacity="0.9"
+                               TextChanged="SearchBar_TextChanged"
+                               HorizontalOptions="Start"
+                               VerticalOptions="CenterAndExpand"    
+                               />
+
+            </StackLayout>
+
+
+
             <ListView x:Name="SuggestionsListView"
-                          Grid.Row="1"
-                          Margin="10"
+
+           
                           HasUnevenRows="True"
                           BackgroundColor="#1E252B"
                            SeparatorColor="Black"
                         ItemTapped="AddToWatchList"
                          ItemsSource="{Binding CompanyList}"
                       >
+   
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-            
-                            <Grid Padding="10">
+                            
+
+                            <Grid Padding="20,10,20,10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="30"/>
                                     <RowDefinition Height="*"/>
-                         
+
 
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
@@ -101,11 +108,11 @@
                                        Grid.RowSpan="2"    
                                        VerticalOptions="Center"
                                        />
-                     
+
 
                             </Grid>
 
-        
+
 
                         </ViewCell>
                     </DataTemplate>
@@ -113,7 +120,8 @@
 
             </ListView>
 
-        </Grid>
+
+        </StackLayout>
 
     </ContentPage.Content>
 </ContentPage>

@@ -20,13 +20,14 @@ namespace investingph.ViewModels
 
         private Command<string> _refreshWatchCommand;
         private string _statusMessage;
-
+        public bool Exists { get; set; }
 
 
 
         public WatchListViewModel()
         {
-            AddToWatchList("JFC");
+
+
             _refreshWatchCommand = new Command<string>(RefreshWatchList);
             Title = "Watch";
             IsBusy = true;
@@ -44,6 +45,12 @@ namespace investingph.ViewModels
 
             try
             {
+                await App._WatchListData.RecordExists();
+                if (!App._WatchListData.Exists)
+                {
+                    await AddToWatchList("JFC");
+                }
+
                 StockServices stockServices = new StockServices();
                 List<Stock> list = await stockServices.GetStockList();
                 ObservableCollection<WatchList> watch = 
